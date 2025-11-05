@@ -4,7 +4,248 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo - Wanessa Karen Pereira Pacheco</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Importação de Fonte */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        /* Estilos Globais e Reset Básico */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #0056b3;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 5px solid #003d80;
+        }
+
+        header h1 {
+            margin: 0 0 5px 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        header .title {
+            margin: 0 0 15px 0;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Títulos de Seções */
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+        }
+
+        /* Seção de Perfil */
+        .profile p {
+            margin-bottom: 10px;
+        }
+
+        .profile ul {
+            list-style-type: square;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        /* Experiência e Educação */
+        .job, .course {
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 3px solid #0056b3;
+        }
+
+        .job h3, .course h3 {
+            margin: 0 0 5px 0;
+            color: #555;
+            font-size: 1.2em;
+        }
+
+        .dates, .institution {
+            font-style: italic;
+            color: #777;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 0.9em;
+        }
+
+        .job ul {
+            margin-top: 5px;
+            margin-bottom: 0;
+            padding-left: 20px;
+        }
+
+        /* Certificações */
+        .certifications ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .certifications li {
+            background-color: #f9f9f9;
+            padding: 8px 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            border-left: 4px solid #00aaff;
+        }
+
+        /* --- Estilos da Seção de Habilidades (Skills) --- */
+
+        .skills-category {
+            margin-top: 25px;
+            margin-bottom: 35px;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .skills-category h3 {
+            color: #0056b3;
+            font-size: 1.2em;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .skill-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            flex: 0 0 40%;
+            font-weight: 500;
+            color: #333;
+            font-size: 1em;
+        }
+
+        /* Contêiner da Barra de Progresso (Trilha) */
+        .progress-container {
+            flex: 0 0 55%;
+            background-color: #f0f0f0;
+            border-radius: 50px;
+            overflow: hidden;
+            height: 18px;
+            position: relative;
+        }
+
+        /* Barra de Progresso em si */
+        .progress-bar {
+            height: 100%;
+            color: white;
+            text-align: right;
+            padding-right: 10px;
+            line-height: 18px;
+            font-size: 0.8em;
+            font-weight: 600;
+            width: 0; /* Largura inicial zero para o efeito de "carregamento" */
+            animation: fill-bar 1.5s ease-out forwards;
+        }
+
+        /* Estilos de cor por categoria */
+        /* Marketing Digital & Tráfego Pago (Azul) */
+        .skills-category:nth-child(1) .progress-bar {
+            background: linear-gradient(to right, #007bff, #0056b3);
+        }
+
+        /* Análise de Dados & Otimização (Ciano) */
+        .skills-category:nth-child(2) .progress-bar {
+            background: linear-gradient(to right, #17a2b8, #138496);
+        }
+
+        /* Desenvolvimento & Automação (Verde - Foco Back-End) */
+        .progress-bar.development {
+            background: linear-gradient(to right, #28a745, #1e7e34);
+        }
+
+        /* Keyframes para o efeito de carregamento */
+        @keyframes fill-bar {
+            0% { width: 0; }
+            /* 100% da largura é definida pelo estilo inline no HTML */
+        }
+
+        /* Rodapé */
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            color: #777;
+            font-size: 0.8em;
+        }
+
+        /* Responsividade Final (Mobile First) */
+        @media (max-width: 600px) {
+            main {
+                margin: 10px;
+                padding: 10px;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            header .title {
+                font-size: 1em;
+            }
+            .skills-category {
+                padding: 15px;
+            }
+            .skill-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .skill-name, .progress-container {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+            .skill-name {
+                margin-bottom: 5px;
+            }
+            .progress-container {
+                margin-bottom: 10px;
+                height: 15px;
+            }
+            .progress-bar {
+                line-height: 15px;
+                font-size: 0.75em;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,6 +269,82 @@
                 <li><strong>Visão Analítica e Orientada a Metas:</strong> Gosto de desafios e de trabalhar com metas claras, conectando o marketing a resultados concretos.</li>
             </ul>
             <p>Atualmente, estou me aprofundando em **Análise e Desenvolvimento de Sistemas**, com especialização em **Back-End (JavaScript)**, buscando integrar automação e inteligência de dados para inovar nas estratégias de marketing digital.</p>
+        </section>
+
+        <section class="skills">
+            <h2>🛠️ Habilidades Técnicas</h2>
+            
+            <div class="skills-category">
+                <h3>Marketing Digital & Tráfego Pago</h3>
+                <div class="skill-item">
+                    <span class="skill-name">Meta Ads (Facebook/Instagram)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 95%;">95%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Google Ads (Search, Display, YouTube)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 95%;">95%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">LinkedIn Ads & TikTok Ads</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 85%;">85%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Segurança de Contas & Bloqueios</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Análise de Dados & Otimização</h3>
+                <div class="skill-item">
+                    <span class="skill-name">Google Analytics 4 (GA4)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Google Tag Manager (GTM)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Looker Studio (Data Studio)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">RD Station (Automação de Marketing)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar" style="width: 75%;">75%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-category">
+                <h3>Desenvolvimento & Automação (Em Estudo)</h3>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript (Foco em Back-End)</span>
+                    <div class="progress-container">
+                        <div class="progress-bar development" style="width: 40%;">40%</div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">HTML & CSS</span>
+                    <div class="progress-container">
+                        <div class="progress-bar development" style="width: 55%;">55%</div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="experience">
@@ -74,7 +391,7 @@
                 <li>Curso Completo de Marketing Digital - 23 Cursos em 1 (Udemy, 2025)</li>
                 <li>Desenvolvimento Web com Ruby on Rails (Instituto Federal de Goiás, 2025)</li>
                 <li>Introdução à Programação de Computadores (Alfahelix, 2025)</li>
-                </ul>
+            </ul>
         </section>
     </main>
 
@@ -83,162 +400,3 @@
     </footer>
 </body>
 </html>
-
-<section class="skills">
-            <h2>🛠️ Habilidades Técnicas</h2>
-            
-            <div class="skills-category">
-                <h3>Marketing Digital & Tráfego Pago</h3>
-                <div class="skill-item">
-                    <span class="skill-name">Meta Ads (Facebook/Instagram)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 95%;">95%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Google Ads (Search, Display, YouTube)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 95%;">95%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">LinkedIn Ads & TikTok Ads</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 85%;">85%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Segurança de Contas & Bloqueios</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h3>Análise de Dados & Otimização</h3>
-                <div class="skill-item">
-                    <span class="skill-name">Google Analytics 4 (GA4)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Google Tag Manager (GTM)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Looker Studio (Data Studio)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 80%;">80%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">RD Station (Automação de Marketing)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 75%;">75%</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="skills-category">
-                <h3>Desenvolvimento & Automação (Em Estudo)</h3>
-                <div class="skill-item">
-                    <span class="skill-name">JavaScript (Foco em Back-End)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar development" style="width: 40%;">40%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">HTML & CSS</span>
-                    <div class="progress-container">
-                        <div class="progress-bar development" style="width: 55%;">55%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<section class="skills">
-            <h2>🛠️ Habilidades Técnicas</h2>
-            
-            <div class="skills-category">
-                <h3>Marketing Digital & Tráfego Pago</h3>
-                <div class="skill-item">
-                    <span class="skill-name">Meta Ads (Facebook/Instagram)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 95%;">95%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Google Ads (Search, Display, YouTube)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 95%;">95%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">LinkedIn Ads & TikTok Ads</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 85%;">85%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Segurança de Contas & Bloqueios</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="skills-category">
-                <h3>Análise de Dados & Otimização</h3>
-                <div class="skill-item">
-                    <span class="skill-name">Google Analytics 4 (GA4)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Google Tag Manager (GTM)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Looker Studio (Data Studio)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 80%;">80%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">RD Station (Automação de Marketing)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 75%;">75%</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="skills-category">
-                <h3>Desenvolvimento & Automação (Em Estudo)</h3>
-                <div class="skill-item">
-                    <span class="skill-name">JavaScript (Foco em Back-End)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar development" style="width: 40%;">40%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">HTML & CSS</span>
-                    <div class="progress-container">
-                        <div class="progress-bar development" style="width: 55%;">55%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        ```
-
-//Ao abrir a página, as barras de progresso vão iniciar em `0%` e animar até a porcentagem definida, oferecendo um toque moderno e dinâmico.
-        
-        ```
-
