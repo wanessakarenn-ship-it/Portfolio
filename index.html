@@ -4,24 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currículo Interativo | Wanessa Karen Pereira Pacheco</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Warm Neutrals with Slate Blue Accent -->
-    <!-- Application Structure Plan: A single-page application with a vertical, scrollable layout. It features a sticky navigation bar for quick access to distinct sections: Profile, Skills (with an interactive chart), Experience (as a timeline), and Education/Certifications. This structure was chosen to provide recruiters with a modern, engaging, and highly scannable overview of the candidate's profile, prioritizing ease of navigation and information digestibility over a traditional linear document. -->
-    <!-- Visualization & Content Choices: 
-        - Report Info: Especialidades (Skills). Goal: Organize & Inform. Viz/Presentation Method: An interactive horizontal bar chart. Interaction: Tooltips on hover. Justification: A chart provides a quick, visual summary of core competencies, making them more impactful than a simple list. Library/Method: Chart.js (Canvas).
-        - Report Info: Experiência Profissional. Goal: Show Change/Progression. Viz/Presentation Method: A vertical timeline. Interaction: None, the chronological flow is the key feature. Justification: A timeline is the most intuitive and standard way to display career progression. Library/Method: HTML/Tailwind.
-        - All other text content is organized into clear, thematically-grouped sections with headings for scannability.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #FDFBF7;
-            color: #3D405B;
+            background-color: #FDFBF7; /* Neutro claro */
+            color: #3D405B; /* Azul escuro neutro para texto */
         }
         .chart-container {
             position: relative;
@@ -37,6 +31,7 @@
                 height: 400px;
             }
         }
+        /* Estilo do Marcador de Posição na Timeline */
         .timeline-item::before {
             content: '';
             position: absolute;
@@ -45,23 +40,28 @@
             width: 1.25rem;
             height: 1.25rem;
             border-radius: 50%;
-            background-color: #81B29A;
+            background-color: #81B29A; /* Verde/Ciano para marcador */
             border: 3px solid #FDFBF7;
+        }
+        /* Destaque para Formação em Desenvolvimento */
+        .highlight-dev {
+            border-left: 4px solid #3D405B !important;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+    <header class="bg-white/80 backdrop-blur-lg shadow-lg sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
             <div>
-                <h1 class="text-xl font-bold text-[#3D405B]">Wanessa K. P. Pacheco</h1>
+                <h1 class="text-xl font-extrabold text-[#3D405B]">Wanessa Pacheco</h1>
             </div>
             <div class="hidden md:flex space-x-8">
-                <a href="#summary" class="text-gray-600 hover:text-[#E07A5F] transition-colors duration-300">Resumo</a>
-                <a href="#skills" class="text-gray-600 hover:text-[#E07A5F] transition-colors duration-300">Especialidades</a>
-                <a href="#experience" class="text-gray-600 hover:text-[#E07A5F] transition-colors duration-300">Experiência</a>
-                <a href="#education" class="text-gray-600 hover:text-[#E07A5F] transition-colors duration-300">Formação</a>
+                <a href="#summary" class="text-gray-600 font-medium hover:text-[#E07A5F] transition-colors duration-300">Resumo</a>
+                <a href="#skills" class="text-gray-600 font-medium hover:text-[#E07A5F] transition-colors duration-300">Especialidades</a>
+                <a href="#experience" class="text-gray-600 font-medium hover:text-[#E07A5F] transition-colors duration-300">Experiência</a>
+                <a href="#education" class="text-gray-600 font-medium hover:text-[#E07A5F] transition-colors duration-300">Formação</a>
+                <a href="https://www.linkedin.com/in/wanessa-karen-b70264272/" target="_blank" class="text-[#E07A5F] font-semibold hover:text-[#3D405B] transition-colors duration-300">LinkedIn</a>
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-gray-600 focus:outline-none">
@@ -69,7 +69,7 @@
                 </button>
             </div>
         </nav>
-        <div id="mobile-menu" class="md:hidden hidden px-6 pb-3">
+        <div id="mobile-menu" class="md:hidden hidden px-6 pb-3 bg-white/90">
             <a href="#summary" class="block py-2 text-gray-600 hover:text-[#E07A5F]">Resumo</a>
             <a href="#skills" class="block py-2 text-gray-600 hover:text-[#E07A5F]">Especialidades</a>
             <a href="#experience" class="block py-2 text-gray-600 hover:text-[#E07A5F]">Experiência</a>
@@ -80,95 +80,107 @@
     <main class="container mx-auto px-6 py-12">
 
         <section id="hero" class="text-center mb-20">
-            <h2 class="text-4xl md:text-5xl font-bold text-[#3D405B] mb-3">WANESSA KAREN PEREIRA PACHECO</h2>
-            <p class="text-xl md:text-2xl text-[#E07A5F] font-medium mb-6">Gestora de Tráfego Pago</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold text-[#3D405B] mb-3">WANESSA KAREN PEREIRA PACHECO</h2>
+            <p class="text-xl md:text-2xl text-[#E07A5F] font-semibold mb-6">Gestora de Tráfego Pago & Futura Desenvolvedora Back-End</p>
             <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 text-gray-600">
                 <a href="mailto:wanessakarenn@gmail.com" class="hover:text-[#E07A5F] transition-colors duration-300">wanessakarenn@gmail.com</a>
-                <span class="hidden md:block">•</span>
+                <span class="hidden md:block text-gray-400">•</span>
                 <a href="tel:+5562982294758" class="hover:text-[#E07A5F] transition-colors duration-300">(62) 98229-4758</a>
-                <span class="hidden md:block">•</span>
+                <span class="hidden md:block text-gray-400">•</span>
                 <span>Aparecida de Goiânia, GO</span>
             </div>
              <p class="text-md text-gray-500 mt-4">Pretensão Salarial: A partir de R$ 3.000,00</p>
         </section>
 
-        <section id="summary" class="mb-20 max-w-4xl mx-auto">
+        <section id="summary" class="mb-20 max-w-4xl mx-auto p-6 md:p-10 bg-white shadow-xl rounded-xl">
             <h3 class="text-3xl font-bold text-center mb-8 text-[#3D405B]">Resumo das Qualificações</h3>
-            <p class="text-lg text-center text-gray-700 leading-relaxed">
-                Profissional com mais de 5 anos de experiência em gestão de tráfego pago. Minha atuação é focada em segurança e estruturação de contas, utilizando boas práticas para prevenir bloqueios e invasões em plataformas de anúncios. Tenho expertise comprovada no desenvolvimento de estratégias de conversão de leads e vendas, com foco em desempenho e resultados mensuráveis. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e me especializando em Back-End com foco em JavaScript, buscando integrar cada vez mais tecnologia, automação e inteligência de dados às minhas estratégias.
+            <p class="text-lg text-gray-700 leading-relaxed border-l-4 border-[#81B29A] pl-4">
+                Profissional com mais de **5 anos de experiência** em **gestão de tráfego pago** de alta performance. Minha expertise se concentra em **segurança e estruturação de contas**, utilizando boas práticas para prevenir bloqueios e invasões em plataformas de anúncios (Meta Ads, Google Ads). Tenho foco em **conversão de leads e vendas**, utilizando o *Growth Hacking* e **Análise de Dados** (Google Analytics, Looker Studio) para otimizar o ROI.
+            </p>
+            <p class="text-lg text-gray-700 leading-relaxed mt-4 border-l-4 border-[#E07A5F] pl-4">
+                Em **transição de carreira** para a área de desenvolvimento, estou cursando **Análise e Desenvolvimento de Sistemas** com especialização em **Back-End (JavaScript)**. Busco integrar meu *mindset* analítico de marketing com habilidades de **automação e programação**, tornando-me uma profissional de tecnologia com forte base em resultados de negócio.
             </p>
         </section>
 
-        <section id="skills" class="mb-20">
-            <h3 class="text-3xl font-bold text-center mb-12 text-[#3D405B]">Principais Especialidades</h3>
-             <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Esta visualização destaca minhas áreas de maior proficiência e as ferramentas que domino para gerar resultados. Passe o mouse sobre as barras para ver mais detalhes sobre cada competência.</p>
+        <section id="skills" class="mb-20 p-6 md:p-10 bg-white shadow-xl rounded-xl">
+            <h3 class="text-3xl font-bold text-center mb-12 text-[#3D405B]">Especialidades Técnicas</h3>
+            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Esta visualização destaca minhas áreas de maior proficiência (Dados em %) e as ferramentas que domino. Passe o mouse sobre as barras para detalhes.</p>
             <div class="chart-container">
                 <canvas id="skillsChart"></canvas>
             </div>
+            <div class="mt-8 text-center text-gray-600">
+                <span class="inline-block px-3 py-1 bg-[#3D405B]/10 rounded-full text-sm font-semibold text-[#3D405B]">Em Desenvolvimento:</span>
+                <span class="text-sm ml-2">JavaScript (Back-End), HTML, CSS.</span>
+            </div>
         </section>
 
-        <section id="experience" class="mb-20">
+        <section id="experience" class="mb-20 p-6 md:p-10 bg-white shadow-xl rounded-xl">
             <h3 class="text-3xl font-bold text-center mb-12 text-[#3D405B]">Experiência Profissional</h3>
-            <div class="relative max-w-3xl mx-auto border-l-2 border-[#81B29A]/50 pl-12">
+            <div class="relative max-w-3xl mx-auto border-l-4 border-[#81B29A]/50 pl-12">
                 
                 <div class="mb-12 timeline-item">
-                    <p class="font-bold text-lg text-[#3D405B]">Gestora de Tráfego Pago</p>
-                    <p class="font-medium text-md text-gray-700">Cia g3</p>
+                    <p class="font-extrabold text-xl text-[#3D405B]">Gestora de Tráfego Pago</p>
+                    <p class="font-semibold text-lg text-gray-700">Cia g3</p>
                     <p class="text-sm text-gray-500 mb-3">Abril 2023 – Maio 2025</p>
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        <li>Gestão completa de campanhas de tráfego pago, com foco em segurança, estruturação e aplicação de boas práticas para evitar bloqueios e invasões.</li>
-                        <li>Desenvolvimento e implementação de estratégias de conversão de leads e vendas, priorizando desempenho e resultados mensuráveis.</li>
+                        <li>Liderança na gestão de campanhas de tráfego, com ênfase em **segurança de contas e boas práticas** para alta performance.</li>
+                        <li>Implementação de estratégias de **conversão de leads e funis de vendas** baseadas em análise de dados.</li>
                     </ul>
                 </div>
 
-                <div class="timeline-item">
-                    <p class="font-bold text-lg text-[#3D405B]">Gerente de Marketing Digital</p>
-                    <p class="font-medium text-md text-gray-700">SOUB Digital</p>
+                <div class="mb-12 timeline-item">
+                    <p class="font-extrabold text-xl text-[#3D405B]">Gerente de Marketing Digital</p>
+                    <p class="font-semibold text-lg text-gray-700">SOUB Digital</p>
                     <p class="text-sm text-gray-500 mb-3">Janeiro 2019 – Outubro 2021</p>
                     <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        <li>Especialista em desenvolvimento de estratégias para conversão de leads e otimização de vendas.</li>
-                        <li>Responsável pela concepção, implementação e monitoramento de ações digitais para impulsionar o funil de vendas.</li>
-                        <li>Utilização do Google Analytics para análise aprofundada de dados de comportamento do usuário e performance de campanhas.</li>
-                        <li>Proficiência em Google Tag Manager para implementação e gestão eficiente de tags de rastreamento.</li>
+                        <li>Especialista em desenvolvimento de estratégias de **conversão de leads** e otimização de vendas.</li>
+                        <li>Planejamento e monitoramento de ações digitais, impulsionando o funil de vendas com **Google Analytics e GTM**.</li>
+                        <li>Proficiência em ferramentas de automação para escalabilidade de processos.</li>
                     </ul>
                 </div>
 
             </div>
         </section>
 
-        <section id="education" class="mb-12">
+        <section id="education" class="mb-12 p-6 md:p-10 bg-white shadow-xl rounded-xl">
             <h3 class="text-3xl font-bold text-center mb-12 text-[#3D405B]">Formação e Certificações</h3>
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="md:col-span-1">
                     <h4 class="text-2xl font-bold mb-6 text-center text-[#3D405B]">Formação Acadêmica</h4>
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200/50">
-                        <p class="font-bold text-lg">Técnico em Transporte Rodoviário</p>
+                    <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-200/50 highlight-dev">
+                        <p class="font-extrabold text-lg text-[#3D405B]">Cursando: Análise e Desenvolvimento de Sistemas</p>
+                        <p class="text-md text-gray-600 font-medium">Foco em Back-End (JavaScript)</p>
+                        <p class="text-sm text-gray-500 mt-1">Início: 2024</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md mt-4 border border-gray-200/50">
+                        <p class="font-semibold text-lg">Técnico em Transporte Rodoviário</p>
                         <p class="text-md text-gray-600">Instituto Federal de Educação, Ciência e Tecnologia de Goiás</p>
                         <p class="text-sm text-gray-500 mt-1">Jan 2020 – Abr 2023</p>
                     </div>
                 </div>
-                <div>
+
+                <div class="md:col-span-2">
                     <h4 class="text-2xl font-bold mb-6 text-center text-[#3D405B]">Cursos e Certificações</h4>
                     <div class="space-y-4">
-                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200/50">
-                            <p class="font-semibold">Google Ads Search Certification</p>
+                        <div class="bg-[#FDFBF7] p-4 rounded-lg shadow-inner border border-gray-200/50">
+                            <p class="font-semibold text-[#E07A5F]">Google Ads Search Certification</p>
                             <p class="text-sm text-gray-500">Skillshop - 2024</p>
                         </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200/50">
-                            <p class="font-semibold">Anúncios de Pesquisa Intermediários com IA</p>
+                        <div class="bg-[#FDFBF7] p-4 rounded-lg shadow-inner border border-gray-200/50">
+                            <p class="font-semibold text-[#E07A5F]">Anúncios de Pesquisa Intermediários com IA</p>
                             <p class="text-sm text-gray-500">Skillshop - 2024</p>
                         </div>
-                         <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200/50">
-                            <p class="font-semibold">Gestão Empresarial</p>
-                            <p class="text-sm text-gray-500">Instituto Brasileiro De Terapias Holísticas - 2025</p>
-                        </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200/50">
-                            <p class="font-semibold">Desenvolvimento Web com Ruby on Rails</p>
+                         <div class="bg-[#FDFBF7] p-4 rounded-lg shadow-inner border border-gray-200/50">
+                            <p class="font-semibold text-[#3D405B]">Desenvolvimento Web com Ruby on Rails</p>
                             <p class="text-sm text-gray-500">Instituto Federal de Goiás - 2025</p>
                         </div>
-                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-200/50">
-                            <p class="font-semibold">Introdução à Programação de Computadores</p>
+                        <div class="bg-[#FDFBF7] p-4 rounded-lg shadow-inner border border-gray-200/50">
+                            <p class="font-semibold text-[#3D405B]">Introdução à Programação de Computadores</p>
                             <p class="text-sm text-gray-500">Alfahelix - 2025</p>
+                        </div>
+                        <div class="bg-[#FDFBF7] p-4 rounded-lg shadow-inner border border-gray-200/50">
+                            <p class="font-semibold text-[#E07A5F]">Gestão Empresarial</p>
+                            <p class="text-sm text-gray-500">Instituto Brasileiro De Terapias Holísticas - 2025</p>
                         </div>
                     </div>
                 </div>
@@ -179,13 +191,14 @@
 
     <footer class="bg-white border-t border-gray-200/80 mt-12">
         <div class="container mx-auto px-6 py-6 text-center text-gray-600">
-            <p>&copy; 2025 Wanessa Karen Pereira Pacheco. Todos os direitos reservados.</p>
-            <p class="text-sm mt-2">Este currículo interativo foi gerado para facilitar a visualização de minhas qualificações.</p>
+            <p>&copy; 2025 Wanessa Karen Pacheco. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Construído com **Tailwind CSS** e **Chart.js**.</p>
         </div>
     </footer>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Lógica do Menu Mobile
             const menuBtn = document.getElementById('menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
             menuBtn.addEventListener('click', () => {
@@ -201,33 +214,32 @@
                 });
             });
 
+            // Configuração do Chart.js
             const ctx = document.getElementById('skillsChart').getContext('2d');
             const skillsChart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: [
-                        'Gestão de Tráfego (Google & Meta Ads)', 
-                        'Estratégias de Marketing e Funis', 
-                        'Análise de Dados (Analytics & Looker)', 
-                        'Ferramentas de Automação (RD Station)',
-                        'Gestão de Tags (GTM)'
+                        'Meta Ads (Facebook/Instagram)', 
+                        'Google Ads (Search, Display, YouTube)', 
+                        'Segurança de Contas & Bloqueios',
+                        'Google Analytics 4 (GA4) / GTM', 
+                        'Looker Studio / Otimização de ROI', 
+                        'JavaScript / Back-End (Foco Futuro)' /* Adicionado para mostrar o foco */
                     ],
                     datasets: [{
                         label: 'Nível de Proficiência',
-                        data: [95, 90, 85, 80, 88],
+                        data: [95, 95, 90, 88, 85, 40], /* 40% para desenvolvimento, mostrando que está em andamento */
                         backgroundColor: [
-                            'rgba(129, 178, 154, 0.7)',
-                            'rgba(224, 122, 95, 0.7)',
-                            'rgba(61, 64, 91, 0.7)',
-                            'rgba(244, 202, 112, 0.7)',
-                            'rgba(131, 131, 131, 0.7)'
+                            'rgba(224, 122, 95, 0.9)', /* Meta Ads */
+                            'rgba(224, 122, 95, 0.9)', /* Google Ads */
+                            'rgba(61, 64, 91, 0.8)', /* Segurança */
+                            'rgba(129, 178, 154, 0.9)', /* GA4/GTM */
+                            'rgba(129, 178, 154, 0.9)', /* Looker */
+                            'rgba(61, 64, 91, 0.4)' /* JavaScript (Cor mais suave para 'Em Desenvolvimento') */
                         ],
                         borderColor: [
-                            '#81B29A',
-                            '#E07A5F',
-                            '#3D405B',
-                            '#F4CA70',
-                            '#838383'
+                            '#E07A5F', '#E07A5F', '#3D405B', '#81B29A', '#81B29A', '#3D405B'
                         ],
                         borderWidth: 2,
                         borderRadius: 5,
@@ -244,37 +256,25 @@
                             grid: {
                                 color: 'rgba(0, 0, 0, 0.05)'
                             },
-                             ticks: {
+                            ticks: {
                                 display: false
                             }
                         },
                         y: {
-                            grid: {
-                                display: false
-                            },
+                            grid: { display: false },
                             ticks: {
-                                font: {
-                                    size: 14,
-                                    weight: '500'
-                                },
+                                font: { size: 14, weight: '500' },
                                 color: '#3D405B'
                             }
                         }
                     },
                     plugins: {
-                        legend: {
-                            display: false
-                        },
+                        legend: { display: false },
                         tooltip: {
                             enabled: true,
                             backgroundColor: '#3D405B',
-                            titleFont: {
-                                size: 16,
-                                weight: 'bold'
-                            },
-                            bodyFont: {
-                                size: 14
-                            },
+                            titleFont: { size: 16, weight: 'bold' },
+                            bodyFont: { size: 14 },
                             callbacks: {
                                 label: function(context) {
                                     return ` Proficiência: ${context.raw}%`;
@@ -288,4 +288,3 @@
     </script>
 </body>
 </html>
-
