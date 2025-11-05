@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo - Wanessa Karen Pereira Pacheco</title>
+    <title>Currículo - Wanessa Karen Pereira Pacheco (Neumorphism)</title>
     
     <style>
         /* Importação de Fonte */
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-        /* Variáveis CSS para Cores e Fontes */
+        /* Variáveis CSS para Cores Neumórficas */
         :root {
-            --primary-color: #007bff; /* Azul vibrante para destaque */
-            --secondary-color: #17a2b8; /* Ciano para habilidades de dados */
-            --tertiary-color: #28a745; /* Verde para desenvolvimento */
-            --background-light: #f8f9fa; /* Fundo muito claro */
-            --text-dark: #343a40; /* Texto escuro */
-            --text-medium: #6c757d; /* Texto médio (datas, detalhes) */
-            --border-light: #e9ecef;
+            --base-color: #e0e5ec; /* Cor de fundo essencial para Neumorfismo */
+            --primary-color: #007bff; /* Azul vibrante (Usado apenas para texto de título e barras) */
+            --text-dark: #343a40;
+            --text-medium: #6c757d;
+            --shadow-light: #ffffff; /* Sombra clara (superior/esquerda) */
+            --shadow-dark: #a3b1c6; /* Sombra escura (inferior/direita) */
+            --border-radius: 15px; /* Bordas suaves e visíveis */
             --font-family-main: 'Montserrat', sans-serif;
         }
 
@@ -26,39 +26,62 @@
             font-family: var(--font-family-main);
             margin: 0;
             padding: 0;
-            background-color: var(--background-light);
+            background-color: var(--base-color); /* Fundo Neumórfico */
             color: var(--text-dark);
             line-height: 1.6;
+            transition: background-color 0.3s;
         }
 
         main {
-            max-width: 960px; /* Maior largura em desktop */
-            margin: 0 auto; /* Remove margem superior e inferior em mobile */
-            padding: 20px 15px; /* Padding interno consistente */
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 15px;
             box-sizing: border-box;
         }
 
-        /* Cabeçalho */
+        /* Aplicação do Estilo Neumórfico nos Cartões de Seção */
+        section {
+            background-color: var(--base-color);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: var(--border-radius);
+            /* O coração do Neumorfismo: Sombra suave clara e sombra suave escura */
+            box-shadow: 
+                7px 7px 15px var(--shadow-dark),
+                -7px -7px 15px var(--shadow-light);
+            transition: all 0.4s ease-in-out;
+        }
+        
+        /* Efeito Hover/Pressionado (Opcional, mas dá vida ao Neumorfismo) */
+        section:hover {
+            box-shadow: 
+                inset 2px 2px 5px var(--shadow-dark),
+                inset -2px -2px 5px var(--shadow-light);
+        }
+
+        /* Cabeçalho - Mantemos forte, mas com sombra neumórfica */
         header {
-            background-color: var(--primary-color);
-            color: white;
+            background-color: var(--base-color);
+            color: var(--text-dark);
             padding: 30px 15px;
             text-align: center;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra tradicional para contraste */
             margin-bottom: 20px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0 0 5px 0;
-            font-size: 1.8em; /* Mobile First: Tamanho menor em mobile */
+            font-size: 1.8em;
             font-weight: 700;
-            letter-spacing: 1px;
+            color: var(--primary-color);
         }
 
         header .title {
             margin: 0 0 10px 0;
-            font-size: 1em; /* Mobile First */
-            font-weight: 400;
+            font-size: 1em;
+            font-weight: 500;
+            color: var(--text-dark);
         }
 
         .contact-info {
@@ -66,42 +89,39 @@
         }
 
         .contact-info a {
-            color: white;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-info a:hover {
             text-decoration: underline;
         }
 
-        /* Seções e Títulos */
-        section {
-            background-color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px; /* Cantos arredondados modernos */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
-        }
-
+        /* Títulos de Seções */
         h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--border-light);
+            border-bottom: 2px solid var(--shadow-dark);
             padding-bottom: 8px;
             margin-top: 0;
             margin-bottom: 20px;
-            font-size: 1.4em; /* Mobile First */
-            font-weight: 600;
+            font-size: 1.4em;
+            font-weight: 700;
         }
-
-        /* Perfil */
-        .profile ul {
-            list-style-type: none; /* Remove marcadores padrão */
+        
+        /* Estilos de Lista (Perfil e Experiência) */
+        .profile ul, .job ul {
+            list-style-type: none;
             padding-left: 0;
         }
 
-        .profile ul li {
+        .profile ul li, .job ul li {
             padding-left: 1.5em;
             text-indent: -1.5em;
             margin-bottom: 5px;
+            color: var(--text-dark);
         }
-        .profile ul li::before {
-            content: "•"; /* Ícone de marcador moderno */
+        .profile ul li::before, .job ul li::before {
+            content: "•";
             color: var(--primary-color);
             font-weight: bold;
             display: inline-block;
@@ -109,103 +129,66 @@
         }
 
         /* Experiência e Educação */
-        .job, .course {
-            margin-bottom: 20px;
-            padding-left: 0;
-            border-left: none; /* Remove linha lateral para design mais limpo */
-        }
-
-        .job h3, .course h3 {
-            margin: 0;
-            color: var(--text-dark);
-            font-size: 1.1em;
-            font-weight: 600;
-        }
-
         .dates, .institution {
             font-style: italic;
             color: var(--text-medium);
             margin: 5px 0 10px 0;
             font-size: 0.85em;
         }
-        
-        .job ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
 
-        .job ul li {
-            position: relative;
-            padding-left: 15px;
-            margin-bottom: 5px;
-        }
-        .job ul li::before {
-            content: "→";
-            color: var(--secondary-color);
-            font-weight: bold;
-            position: absolute;
-            left: 0;
-        }
-
-        /* Certificações */
-        .certifications ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
+        /* Certificações (Estilo "Pressionado" Neumórfico) */
         .certifications li {
-            background-color: var(--background-light);
+            background-color: var(--base-color);
             padding: 10px 15px;
-            margin-bottom: 8px;
-            border-radius: 5px;
-            border-left: 5px solid var(--secondary-color);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            /* Neumorfismo Pressionado */
+            box-shadow: 
+                inset 4px 4px 8px var(--shadow-dark),
+                inset -4px -4px 8px var(--shadow-light);
             font-size: 0.95em;
+            border: 1px solid var(--base-color); /* Para suavizar a transição */
         }
         
-        /* --- Habilidades (Modernizado e Mobile First) --- */
-
+        /* --- Habilidades (Barras Neumórficas) --- */
+        
         .skills-category {
-            margin-top: 25px;
-            margin-bottom: 25px;
-            padding: 0; /* Remove padding extra */
-            border: none;
-            border-radius: 0;
-            background-color: transparent;
-            box-shadow: none;
+            padding: 0;
+            box-shadow: none; /* Remove a sombra do cartão principal */
         }
 
         .skills-category h3 {
-            color: var(--primary-color);
-            font-size: 1.1em;
-            border-bottom: 1px solid var(--border-light);
-            padding-bottom: 5px;
-            margin-bottom: 15px;
+            color: var(--text-dark);
+            border-bottom: 1px solid var(--shadow-dark);
             font-weight: 600;
         }
 
-        /* Mobile First: layout em coluna para telas pequenas */
         .skill-item {
             display: flex;
             flex-direction: column; 
             align-items: flex-start;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .skill-name {
-            width: 100%; /* Ocupa a largura total em mobile */
+            width: 100%;
             font-weight: 500;
             color: var(--text-dark);
             margin-bottom: 5px;
         }
 
-        /* Contêiner da Barra de Progresso */
+        /* Contêiner da Barra (Pista "Afundada" Neumórfica) */
         .progress-container {
-            width: 100%; /* Ocupa a largura total em mobile */
-            background-color: var(--border-light);
+            width: 100%;
+            background-color: var(--base-color);
             border-radius: 50px;
             overflow: hidden;
-            height: 12px; /* Barras mais finas e elegantes */
+            height: 15px;
             position: relative;
+            /* Pista Afundada */
+            box-shadow: 
+                inset 2px 2px 5px var(--shadow-dark),
+                inset -2px -2px 5px var(--shadow-light);
         }
 
         /* Barra de Progresso em si */
@@ -214,24 +197,25 @@
             color: white;
             text-align: right;
             padding-right: 8px;
-            line-height: 12px;
-            font-size: 0.7em;
+            line-height: 15px;
+            font-size: 0.75em;
             font-weight: 600;
             width: 0;
             animation: fill-bar 1.5s ease-out forwards;
+            border-radius: 50px;
         }
 
-        /* Cores das Barras */
+        /* Cores das Barras (MANTIDAS VIBRANTES para contraste com o fundo) */
         .skills-category:nth-child(1) .progress-bar {
-            background: var(--primary-color);
+            background: var(--primary-color); /* Azul */
         }
 
         .skills-category:nth-child(2) .progress-bar {
-            background: var(--secondary-color);
+            background: #17a2b8; /* Ciano */
         }
 
         .progress-bar.development {
-            background: var(--tertiary-color);
+            background: #28a745; /* Verde */
         }
 
         /* Keyframes para o efeito de carregamento */
@@ -243,11 +227,11 @@
         footer {
             text-align: center;
             padding: 15px;
-            background-color: var(--text-dark);
-            color: white;
+            background-color: var(--base-color);
+            color: var(--text-medium);
             font-size: 0.8em;
-            width: 100%;
-            box-sizing: border-box;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
         }
 
         /* Media Query para Tablet/Desktop (Melhorias no Layout) */
@@ -255,41 +239,25 @@
             header h1 {
                 font-size: 3em;
             }
-
-            header .title {
-                font-size: 1.2em;
-            }
-
-            main {
-                padding: 30px;
-            }
-
-            /* Layout de 2 colunas para Habilidades em Desktop */
             .skills-category {
                 display: grid;
-                grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-                gap: 20px 40px; /* Espaçamento entre as barras */
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px 50px;
                 align-items: center;
-                margin-top: 15px;
-                padding: 0;
             }
-            
             .skills-category h3 {
-                grid-column: 1 / -1; /* Título ocupa toda a largura */
-                margin-bottom: 25px;
+                grid-column: 1 / -1;
             }
-
             .skill-item {
-                flex-direction: row; /* Volta para layout em linha */
+                flex-direction: row;
                 justify-content: space-between;
+                margin-bottom: 0;
             }
-
             .skill-name {
                 width: auto;
                 flex: 0 0 40%;
                 margin-bottom: 0;
             }
-
             .progress-container {
                 flex: 0 0 55%;
             }
@@ -360,92 +328,4 @@
                     </div>
                 </div>
                 <div class="skill-item">
-                    <span class="skill-name">Google Tag Manager (GTM)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 90%;">90%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">Looker Studio (Data Studio)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 80%;">80%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">RD Station (Automação de Marketing)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 75%;">75%</div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="skills-category">
-                <h3>Desenvolvimento & Automação (Em Estudo)</h3>
-                <div class="skill-item">
-                    <span class="skill-name">JavaScript (Foco em Back-End)</span>
-                    <div class="progress-container">
-                        <div class="progress-bar development" style="width: 40%;">40%</div>
-                    </div>
-                </div>
-                <div class="skill-item">
-                    <span class="skill-name">HTML & CSS</span>
-                    <div class="progress-container">
-                        <div class="progress-bar development" style="width: 55%;">55%</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="experience">
-            <h2>💼 Experiência Profissional</h2>
-            <div class="job">
-                <h3>Gestora de Tráfego Pago - CiaG3</h3>
-                <p class="dates">Abril 2023 – Maio 2025</p>
-                <ul>
-                    <li>Gestão completa de campanhas de tráfego pago, com foco em segurança, estruturação e aplicação de boas práticas para evitar bloqueios e invasões.</li>
-                    <li>Desenvolvimento e implementação de estratégias de conversão de leads e vendas, priorizando desempenho e resultados mensuráveis.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Gestora de Tráfego Pago - SOUB Digital</h3>
-                <p class="dates">Janeiro 2019 – Outubro 2021</p>
-                <ul>
-                    <li>Planejamento, implementação e monitoramento de ações digitais para otimizar o funil de vendas e impulsionar resultados.</li>
-                    <li>Especialista no desenvolvimento de estratégias para conversão de leads e otimização de vendas.</li>
-                    <li>Utilização do Google Analytics para análise aprofundada de dados de comportamento do usuário e performance de campanhas.</li>
-                    <li>Proficiência em Google Tag Manager para implementação e gestão eficiente de tags de rastreamento.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="education">
-            <h2>🎓 Formação e Educação</h2>
-            <div class="course">
-                <h3>Cursando: Análise e Desenvolvimento de Sistemas</h3>
-                <p class="institution">Com foco em Back-End e JavaScript</p>
-            </div>
-            <div class="course">
-                <h3>Técnico em Transporte Rodoviário</h3>
-                <p class="institution">Instituto Federal de Educação, Ciência e Tecnologia de Goiás (IFG) | Jan 2020 – Abr 2023</p>
-            </div>
-        </section>
-
-        <section class="certifications">
-            <h2>🏅 Certificações e Cursos</h2>
-            <ul>
-                <li>Google Ads Search Certification (Skillshop, 2024)</li>
-                <li>Para estrategistas: fundamentos básicos dos anúncios de pesquisa com tecnologia de IA (Skillshop, 2024)</li>
-                <li>Recursos de publicidade do Google (Skillshop, 2024)</li>
-                <li>Marketing Digital (IFMS, 2025)</li>
-                <li>Curso Completo de Marketing Digital - 23 Cursos em 1 (Udemy, 2025)</li>
-                <li>Desenvolvimento Web com Ruby on Rails (Instituto Federal de Goiás, 2025)</li>
-                <li>Introdução à Programação de Computadores (Alfahelix, 2025)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <p>Desenvolvido por Wanessa Karen | 2025</p>
-    </footer>
-</body>
-</html>
+                    <span class="skill-name
