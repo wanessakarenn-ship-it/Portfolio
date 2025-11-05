@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page - Contrate Wanessa Karen | Tráfego Pago & Segurança</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,6 +58,23 @@
             box-shadow: inset 3px 3px 6px #D9D7D3, inset -3px -3px 6px #FFFFFF;
         }
         
+        /* Ajustando a Linha do Tempo para Neumorfismo */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -3rem; 
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            background-color: #81B29A;
+            box-shadow: 3px 3px 6px #D9D7D3, -3px -3px 6px #FFFFFF;
+            border: 5px solid #FDFBF7; 
+        }
+
+        .timeline-item {
+            margin-left: 1rem;
+        }
     </style>
 
 </head>
@@ -68,8 +86,8 @@
             <div>
                 <h1 class="text-2xl font-black text-text-dark">WANESSA K.</h1>
             </div>
-            <a href="mailto:wanessakarenn@gmail.com" class="py-2 px-6 rounded-full text-white font-semibold bg-primary-accent hover:bg-[#c26a51] transition-colors duration-300 neum-cta-button">
-                <i class="fa-solid fa-envelope"></i> Contato Direto
+            <a href="https://wa.me/5562982294758?text=Olá,%20Wanessa!%20Vi%20sua%20Landing%20Page%20e%20tenho%20interesse%20em%20discutir%20uma%20oportunidade.%20Podemos%20agendar%20uma%20conversa?" target="_blank" class="py-2 px-6 rounded-full text-white font-semibold bg-secondary-accent hover:bg-[#6e9b86] transition-colors duration-300 neum-cta-button">
+                <i class="fa-brands fa-whatsapp"></i> Iniciar Chat
             </a>
         </div>
     </header>
@@ -126,35 +144,36 @@
             </div>
         </section>
 
-       <section id="experiencia" class="mb-20 max-w-4xl mx-auto">
-    <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
-        <i class="fa-solid fa-briefcase text-primary-accent mr-3"></i> Experiência Comprovada
-    </h3>
-    
-    <div class="relative border-l-2 border-secondary-accent/50 pl-12">
-        
-        <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-            <p class="font-bold text-lg text-text-dark">Gestora de Tráfego Pago | Cia g3</p>
-            <p class="text-sm text-gray-500 mb-3">Abril 2023 – Maio 2025</p>
-            <ul class="list-disc list-inside text-gray-600 space-y-1">
-                <li>Liderança em Segurança de Contas: Gestão completa de campanhas, implementando estruturação e protocolos de segurança de ponta para reduzir bloqueios e invasões.</li>
-                <li>Otimização de Performance: Estruturação e implementação de funis digitais orientados a resultados, focados em elevado ROAS e na conversão de leads de alto valor.</li>
-            </ul>
-        </div>
+        <section id="experiencia" class="mb-20 max-w-4xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
+                <i class="fa-solid fa-briefcase text-primary-accent mr-3"></i> Experiência Comprovada
+            </h3>
+            
+            <div class="relative border-l-2 border-secondary-accent/50 pl-12">
+                
+                <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
+                    <p class="font-bold text-lg text-text-dark">Gestora de Tráfego Pago | Cia g3</p>
+                    <p class="text-sm text-gray-500 mb-3">Abril 2023 – Maio 2025</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Liderança em Segurança de Contas: Gestão completa de campanhas, implementando estruturação e protocolos de segurança de ponta para reduzir bloqueios e invasões.</li>
+                        <li>Otimização de Performance: Estruturação e implementação de funis digitais orientados a resultados, focados em elevado ROAS e na conversão de leads de alto valor.</li>
+                    </ul>
+                </div>
 
-        <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-            <p class="font-bold text-lg text-text-dark">Gerente de Marketing Digital | SOUB Digital</p>
-            <p class="text-sm text-gray-500 mb-3">Janeiro 2019 – Outubro 2021</p>
-            <ul class="list-disc list-inside text-gray-600 space-y-1">
-                <li>Estratégia Full Funnel: Responsável por todo o ciclo de Marketing Digital, desde o planejamento até o monitoramento para otimizar o funil de vendas.</li>
-                <li>Especialização em Conversão: Desenho e execução de estratégias de aquisição e qualificação de leads resultando em crescimento consistente de vendas.</li>
-                <li>Inteligência de Dados: Utilização avançada do Google Analytics (GA4) para análise aprofundada de comportamento e tomada de decisão estratégica.</li>
-                <li>Rastreamento de Precisão: Proficiência em Google Tag Manager para implementação e validação de tags, garantindo a precisão dos dados de rastreamento.</li>
-            </ul>
-        </div>
+                <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
+                    <p class="font-bold text-lg text-text-dark">Gerente de Marketing Digital | SOUB Digital</p>
+                    <p class="text-sm text-gray-500 mb-3">Janeiro 2019 – Outubro 2021</p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Estratégia Full Funnel: Responsável por todo o ciclo de Marketing Digital, desde o planejamento até o monitoramento para otimizar o funil de vendas.</li>
+                        <li>Especialização em Conversão: Desenho e execução de estratégias de aquisição e qualificação de leads, resultando em crescimento consistente de vendas.</li>
+                        <li>Inteligência de Dados: Utilização avançada do Google Analytics (GA4) para análise aprofundada de comportamento e tomada de decisão estratégica.</li>
+                        <li>Rastreamento de Precisão: Proficiência em Google Tag Manager para implementação e validação de tags, garantindo a precisão dos dados de rastreamento.</li>
+                    </ul>
+                </div>
 
-    </div>
-</section>
+            </div>
+        </section>
+
         <section id="formacao" class="mb-20 max-w-4xl mx-auto">
              <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
                 <i class="fa-solid fa-graduation-cap text-secondary-accent mr-3"></i> Alinhamento e Formação
@@ -168,10 +187,10 @@
                     
                     <div class="space-y-3">
                          <p class="font-bold text-lg">Cursando: Marketing Digital</p>
-                         <p class="text-md text-gray-600">Unniasselvi | <span class="text-secondary-accent">Em andamento</span></p>
+                         <p class="text-md text-gray-600">Unniasselvi </p>
                          <hr class="border-gray-200">
                          <p class="font-bold text-lg">Cursando: Back-End JavaScript</p>
-                         <p class="text-md text-gray-600">Softex Penanbuco / Instituto Federal | <span class="text-secondary-accent">Cursando</span></p>
+                         <p class="text-md text-gray-600">Softex Penanbuco / Instituto Federal </p>
                     </div>
                 </div>
 
@@ -196,10 +215,10 @@
         
         <section id="final-cta" class="text-center py-12 px-8 bg-secondary-accent/20 rounded-3xl shadow-neum-convex max-w-4xl mx-auto">
              <h3 class="text-3xl font-bold text-text-dark mb-4">Pronta para Impulsionar Seus Resultados?</h3>
-             <p class="text-xl text-gray-700 mb-8">Não perca mais tempo com contas vulneráveis e campanhas sem foco. Agende uma conversa hoje mesmo.</p>
+             <p class="text-xl text-gray-700 mb-8">Reduza vulnerabilidades de contas e comece a focar em crescimento. Clique e inicie a conversa:</p>
              
-             <a href="mailto:wanessakarenn@gmail.com" class="inline-block py-3 px-10 text-xl rounded-full text-white font-bold bg-primary-accent hover:bg-[#c26a51] transition-colors duration-300 neum-cta-button">
-                 Fale Comigo Agora <i class="fa-solid fa-arrow-right ml-2"></i>
+             <a href="https://wa.me/5562982294758?text=Olá,%20Wanessa!%20Vi%20sua%20Landing%20Page%20e%20tenho%20interesse%20em%20discutir%20uma%20oportunidade.%20Podemos%20agendar%20uma%20conversa?" target="_blank" class="inline-block py-3 px-10 text-xl rounded-full text-white font-bold bg-secondary-accent hover:bg-[#6e9b86] transition-colors duration-300 neum-cta-button">
+                 <i class="fa-brands fa-whatsapp mr-2"></i> Iniciar Conversa no WhatsApp
              </a>
         </section>
 
@@ -225,5 +244,3 @@
 </body>
 
 </html>
-
-
