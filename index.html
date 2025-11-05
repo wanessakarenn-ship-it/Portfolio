@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo Interativo | Wanessa Karen Pereira Pacheco</title>
+    <title>Landing Page - Contrate Wanessa Karen | Tráfego Pago & Segurança</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <script>
@@ -20,8 +18,8 @@
                     // Cor de fundo Neumorphism: #FDFBF7
                     colors: {
                         'neum-base': '#FDFBF7',
-                        'primary-accent': '#E07A5F', // Cor original de destaque
-                        'secondary-accent': '#81B29A', // Cor original da timeline
+                        'primary-accent': '#E07A5F', // Cor original de destaque (CTA principal)
+                        'secondary-accent': '#81B29A', // Cor de apoio (Sucesso/Confirmação)
                         'text-dark': '#3D405B', // Cor original do texto
                     },
                     // Sombra Neumorphism
@@ -44,320 +42,185 @@
             background-color: #FDFBF7; /* Cor de fundo Neumorphism */
             color: #3D405B;
         }
-        
-        /* Ajuste do Neumorphism para Chart.js */
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 320px;
-            max-height: 400px;
-            /* Aplicando Neumorphism ao container do gráfico */
-            background-color: #FDFBF7;
-            box-shadow: 8px 8px 16px #D9D7D3, -8px -8px 16px #FFFFFF;
-            border-radius: 1.5rem; /* Bordas mais arredondadas */
-            padding: 1.5rem;
+        /* Classe para o botão CTA Neumorfismo */
+        .neum-cta-button {
+            box-shadow: 10px 10px 20px #D9D7D3, -10px -10px 20px #FFFFFF;
+            transition: all 0.2s ease-in-out;
         }
-
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 400px;
-            }
+        /* Efeito de "pressionar" (Concave) ao interagir com o CTA */
+        .neum-cta-button:active {
+            box-shadow: inset 5px 5px 10px #D9D7D3, inset -5px -5px 10px #FFFFFF;
+            transform: scale(0.98);
         }
-        
-        /* Ajustando a Linha do Tempo para Neumorfismo */
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -3rem; /* Ajustado para compensar padding */
-            top: 0.5rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            border-radius: 50%;
-            background-color: #81B29A;
-            /* Neumorphism para o ponto de destaque */
-            box-shadow: 3px 3px 6px #D9D7D3, -3px -3px 6px #FFFFFF;
-            border: 5px solid #FDFBF7; /* Borda mais grossa para destacar */
-        }
-
-        .timeline-item {
-            /* Adiciona espaço para o ponto da timeline */
-            margin-left: 1rem;
-        }
-
-        /* Ajuste para a navegação sticky - mais clean no Neumorphism */
-        .neum-header {
-             background-color: #FDFBF7; /* Fundo sólido para Neumorphism */
-             box-shadow: 0 4px 8px -2px rgba(217, 215, 211, 0.6); /* Sombra suave para a barra fixa */
-        }
-        
-        /* Efeito de botão "pressionado" ao clicar nos links de navegação */
-        .nav-link:active {
+        /* Para input (se fosse um formulário) */
+        .neum-input {
             box-shadow: inset 3px 3px 6px #D9D7D3, inset -3px -3px 6px #FFFFFF;
-            border-radius: 0.5rem;
-            padding: 0.25rem 0.75rem;
-            margin: -0.25rem -0.75rem; /* Ajusta o padding para o "afundamento" */
         }
+        
     </style>
 
 </head>
 
 <body class="antialiased">
 
-    <header class="neum-header sticky top-0 z-50 border-b border-gray-100/50">
-        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <header class="bg-neum-base sticky top-0 z-50 border-b border-gray-100/50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div>
-                <h1 class="text-xl font-bold text-text-dark">Wanessa K. P. Pacheco</h1>
+                <h1 class="text-2xl font-black text-text-dark">WANESSA K.</h1>
             </div>
-            <div class="hidden md:flex space-x-4 p-2 rounded-xl">
-                <a href="#summary" class="nav-link text-gray-600 hover:text-primary-accent transition-all duration-200 p-2 rounded-xl">Resumo</a>
-                <a href="#skills" class="nav-link text-gray-600 hover:text-primary-accent transition-all duration-200 p-2 rounded-xl">Especialidades</a>
-                <a href="#experience" class="nav-link text-gray-600 hover:text-primary-accent transition-all duration-200 p-2 rounded-xl">Experiência</a>
-                <a href="#education" class="nav-link text-gray-600 hover:text-primary-accent transition-all duration-200 p-2 rounded-xl">Formação</a>
-            </div>
-            <div class="md:hidden">
-                <button id="menu-btn" class="text-gray-600 focus:outline-none hover:text-primary-accent transition-colors duration-300 p-2 rounded-lg shadow-neum-soft active:shadow-neum-concave">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </nav>
-        <div id="mobile-menu" class="md:hidden hidden px-6 pb-3 bg-neum-base">
-            <a href="#summary" class="block py-2 text-gray-600 hover:text-primary-accent nav-link">Resumo</a>
-            <a href="#skills" class="block py-2 text-gray-600 hover:text-primary-accent nav-link">Especialidades</a>
-            <a href="#experience" class="block py-2 text-gray-600 hover:text-primary-accent nav-link">Experiência</a>
-            <a href="#education" class="block py-2 text-gray-600 hover:text-primary-accent nav-link">Formação</a>
+            <a href="mailto:wanessakarenn@gmail.com" class="py-2 px-6 rounded-full text-white font-semibold bg-primary-accent hover:bg-[#c26a51] transition-colors duration-300 neum-cta-button">
+                <i class="fa-solid fa-envelope"></i> Contato Direto
+            </a>
         </div>
     </header>
 
-    <main class="container mx-auto px-6 py-12">
+    <main class="container mx-auto px-6 py-16">
 
-        <section id="hero" class="text-center mb-20 bg-neum-base p-10 rounded-3xl shadow-neum-convex">
-            <h2 class="text-4xl md:text-5xl font-bold text-text-dark mb-3">WANESSA KAREN PEREIRA PACHECO</h2>
-            <p class="text-xl md:text-2xl text-primary-accent font-medium mb-6">Gestora de Tráfego Pago</p>
-            <div class="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6 text-gray-600">
-                <a href="mailto:wanessakarenn@gmail.com" class="hover:text-primary-accent transition-colors duration-300 p-1 rounded-lg active:shadow-neum-soft">wanessakarenn@gmail.com</a>
-                <span class="hidden md:block">•</span>
-                <a href="tel:+5562982294758" class="hover:text-primary-accent transition-colors duration-300 p-1 rounded-lg active:shadow-neum-soft">(62) 98229-4758</a>
-                <span class="hidden md:block">•</span>
-                <span>Aparecida de Goiânia, GO</span>
-                <span class="hidden md:block">•</span>
-                <a href="https://www.linkedin.com/in/wanessa-karen-b70264272/" target="_blank" class="hover:text-primary-accent transition-colors duration-300 p-1 rounded-lg active:shadow-neum-soft flex items-center space-x-1">
-                    <i class="fa-brands fa-linkedin text-lg"></i>
-                    <span>/wanessa-karen-b70264272</span>
-                </a>
-            </div>
-            </section>
+        <section id="hero-conversion" class="text-center mb-24 max-w-5xl mx-auto bg-neum-base p-12 rounded-3xl shadow-neum-convex">
+            
+            <span class="text-xl md:text-2xl font-medium text-secondary-accent mb-4 block">
+                <i class="fa-solid fa-shield-halved"></i> Mais de 5 Anos em Tráfego Pago
+            </span>
 
-        <section id="summary" class="mb-20 max-w-4xl mx-auto bg-neum-base p-8 rounded-3xl shadow-neum-convex">
-            <h3 class="text-3xl font-bold text-center mb-8 text-text-dark">Resumo das Qualificações</h3>
-            <p class="text-lg text-center text-gray-700 leading-relaxed">
-                Profissional com mais de 5 anos de experiência em gestão de tráfego pago. Minha atuação é focada em segurança e estruturação de contas, utilizando boas práticas para prevenir bloqueios e invasões em plataformas de anúncios. Tenho expertise comprovada no desenvolvimento de estratégias de conversão de leads e vendas, com foco em desempenho e resultados mensuráveis. Atualmente, estou cursando Marketing Digital e me especializando em Back-End com foco em JavaScript, buscando integrar cada vez mais tecnologia, automação e inteligência de dados às minhas estratégias.
+            <h2 class="text-5xl md:text-7xl font-black text-text-dark leading-tight mb-6">
+                Reduza Bloqueios. <span class="text-primary-accent">Aumente o ROAS.</span>
+            </h2>
+
+            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-10">
+                Especialista em **segurança e estruturação de contas** de anúncios. Transformo processos fragmentados em estratégias de conversão de leads e vendas, com foco em resultados mensuráveis e sustentáveis.
             </p>
+
+            <a href="https://www.linkedin.com/in/wanessa-karen-b70264272/" target="_blank" class="inline-block py-4 px-12 text-2xl rounded-full text-white font-extrabold bg-primary-accent hover:bg-[#c26a51] transition-colors duration-300 neum-cta-button">
+                <i class="fa-brands fa-linkedin"></i> Veja Meu Histórico Completo
+            </a>
+            
+            <p class="text-sm text-gray-500 mt-4">Ou envie um e-mail para agendar uma conversa em <a href="mailto:wanessakarenn@gmail.com" class="text-primary-accent underline">wanessakarenn@gmail.com</a></p>
+
         </section>
 
-        <section id="skills" class="mb-20">
-            <h3 class="text-3xl font-bold text-center mb-12 text-text-dark">Principais Especialidades</h3>
-             <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Esta visualização destaca minhas áreas de maior proficiência e as ferramentas que domino para gerar resultados. Passe o mouse sobre as barras para ver mais detalhes sobre cada competência.</p>
-            <div class="chart-container">
-                <canvas id="skillsChart"></canvas>
+        <section id="especialidades" class="mb-20">
+            <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
+                <i class="fa-solid fa-gears text-secondary-accent mr-3"></i> Minhas Áreas de Foco
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
+                    <i class="fa-solid fa-lock text-5xl text-secondary-accent mb-4"></i>
+                    <h4 class="text-xl font-bold mb-3 text-text-dark">Segurança Antifraude</h4>
+                    <p class="text-gray-700">Aplicação rigorosa de boas práticas para prevenir bloqueios, invasões e perdas de ativos em plataformas de anúncios.</p>
+                </div>
+
+                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
+                    <i class="fa-solid fa-chart-line text-5xl text-primary-accent mb-4"></i>
+                    <h4 class="text-xl font-bold mb-3 text-text-dark">Estratégias de Alto ROAS</h4>
+                    <p class="text-gray-700">Desenvolvimento e implementação de funis digitais focados em performance, otimização de leads e vendas mensuráveis.</p>
+                </div>
+
+                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
+                    <i class="fa-solid fa-code text-5xl text-secondary-accent mb-4"></i>
+                    <h4 class="text-xl font-bold mb-3 text-text-dark">Integração Tech & Ads</h4>
+                    <p class="text-gray-700">Especialização em Back-End (JavaScript) para integrar automação e inteligência de dados nas campanhas de marketing.</p>
+                </div>
+
             </div>
         </section>
 
-        <section id="experience" class="mb-20">
-            <h3 class="text-3xl font-bold text-center mb-12 text-text-dark">Experiência Profissional</h3>
-            <div class="relative max-w-3xl mx-auto border-l-2 border-secondary-accent/50 pl-12">
+        <section id="experiencia" class="mb-20 max-w-4xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
+                <i class="fa-solid fa-briefcase text-primary-accent mr-3"></i> Experiência Comprovada
+            </h3>
+            
+            <div class="relative border-l-2 border-secondary-accent/50 pl-12">
                 
                 <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark">Gestora de Tráfego Pago</p>
-                    <p class="font-medium text-md text-gray-700">Cia g3</p>
+                    <p class="font-bold text-lg text-text-dark">Gestora de Tráfego Pago | Cia g3</p>
                     <p class="text-sm text-gray-500 mb-3">Abril 2023 – Maio 2025</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        <li>Gestão completa de campanhas de tráfego pago, com foco em segurança, estruturação e aplicação de boas práticas para evitar bloqueios e invasões.</li>
-                        <li>Desenvolvimento e implementação de estratégias de conversão de leads e vendas, priorizando desempenho e resultados mensuráveis.</li>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Gestão completa com foco em segurança, estruturação e boas práticas.</li>
+                        <li>Desenvolvimento de estratégias de conversão de leads e vendas.</li>
                     </ul>
                 </div>
 
                 <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark">Gerente de Marketing Digital</p>
-                    <p class="font-medium text-md text-gray-700">SOUB Digital</p>
+                    <p class="font-bold text-lg text-text-dark">Gerente de Marketing Digital | SOUB Digital</p>
                     <p class="text-sm text-gray-500 mb-3">Janeiro 2019 – Outubro 2021</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-2">
-                        <li>Especialista em desenvolvimento de estratégias para conversão de leads e otimização de vendas.</li>
-                        <li>Responsável pela concepção, implementação e monitoramento de ações digitais para impulsionar o funil de vendas.</li>
-                        <li>Utilização do Google Analytics para análise aprofundada de dados de comportamento do usuário e performance de campanhas.</li>
-                        <li>Proficiência em Google Tag Manager para implementação e gestão eficiente de tags de rastreamento.</li>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1">
+                        <li>Especialista em otimização de funil de vendas e conversão de leads.</li>
+                        <li>Análise aprofundada de dados (Google Analytics e GTM).</li>
                     </ul>
                 </div>
 
             </div>
         </section>
 
-        <section id="education" class="mb-12">
-            <h3 class="text-3xl font-bold text-center mb-12 text-text-dark">Formação e Certificações</h3>
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div>
-                    <h4 class="text-2xl font-bold mb-6 text-center text-text-dark">Formação Acadêmica</h4>
+        <section id="formacao" class="mb-20 max-w-4xl mx-auto">
+             <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
+                <i class="fa-solid fa-graduation-cap text-secondary-accent mr-3"></i> Alinhamento e Formação
+            </h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex">
+                    <h4 class="text-2xl font-bold mb-4 text-text-dark flex items-center">
+                        <i class="fa-solid fa-mobile-screen-button mr-2 text-primary-accent"></i> Foco em Marketing e Tech
+                    </h4>
                     
-                    <div class="bg-neum-base p-6 rounded-2xl shadow-neum-soft mb-4">
-                        <p class="font-bold text-lg">Cursando: Marketing Digital</p>
-                        <p class="text-md text-gray-600">Unniasselvi</p>
-                        <p class="text-sm text-gray-500 mt-1">Status: Em andamento</p>
-                    </div>
-
-                    <div class="bg-neum-base p-6 rounded-2xl shadow-neum-soft mb-4">
-                        <p class="font-bold text-lg">Back-End JavaScript</p>
-                        <p class="text-md text-gray-600">Softex Penanbuco / Instituto Federal</p>
-                        <p class="text-sm text-gray-500 mt-1">Status: Cursando</p>
-                    </div>
-
-                    <div class="bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                        <p class="font-bold text-lg">Técnico em Transporte Rodoviário</p>
-                        <p class="text-md text-gray-600">Instituto Federal de Educação, Ciência e Tecnologia de Goiás</p>
-                        <p class="text-sm text-gray-500 mt-1">Jan 2020 – Abr 2023</p>
-                    </div>
-                    
-                    </div>
-
-                <div>
-                    <h4 class="text-2xl font-bold mb-6 text-center text-text-dark">Cursos e Certificações</h4>
-                    <div class="space-y-4">
-                        <div class="bg-neum-base p-4 rounded-2xl shadow-neum-soft">
-                            <p class="font-semibold">Google Ads Search Certification</p>
-                            <p class="text-sm text-gray-500">Skillshop - 2024</p>
-                        </div>
-                        <div class="bg-neum-base p-4 rounded-2xl shadow-neum-soft">
-                            <p class="font-semibold">Anúncios de Pesquisa Intermediários com IA</p>
-                            <p class="text-sm text-gray-500">Skillshop - 2024</p>
-                        </div>
-                         <div class="bg-neum-base p-4 rounded-2xl shadow-neum-soft">
-                            <p class="font-semibold">Gestão Empresarial</p>
-                            <p class="text-sm text-gray-500">Instituto Brasileiro De Terapias Holísticas - 2025</p>
-                        </div>
-                        <div class="bg-neum-base p-4 rounded-2xl shadow-neum-soft">
-                            <p class="font-semibold">Desenvolvimento Web com Ruby on Rails</p>
-                            <p class="text-sm text-gray-500">Instituto Federal de Goiás - 2025</p>
-                        </div>
-                        <div class="bg-neum-base p-4 rounded-2xl shadow-neum-soft">
-                            <p class="font-semibold">Introdução à Programação de Computadores</p>
-                            <p class="text-sm text-gray-500">Alfahelix - 2025</p>
-                        </div>
+                    <div class="space-y-3">
+                         <p class="font-bold text-lg">Cursando: Marketing Digital</p>
+                         <p class="text-md text-gray-600">Unniasselvi | <span class="text-secondary-accent">Em andamento</span></p>
+                         <hr class="border-gray-200">
+                         <p class="font-bold text-lg">Back-End JavaScript</p>
+                         <p class="text-md text-gray-600">Softex Penanbuco / Instituto Federal | <span class="text-secondary-accent">Cursando</span></p>
                     </div>
                 </div>
+
+                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex">
+                    <h4 class="text-2xl font-bold mb-4 text-text-dark flex items-center">
+                        <i class="fa-solid fa-medal mr-2 text-primary-accent"></i> Certificações Relevantes
+                    </h4>
+                    <div class="space-y-3">
+                         <p class="font-semibold text-lg">Google Ads Search Certification</p>
+                         <p class="text-sm text-gray-600">Skillshop - 2024</p>
+                         <hr class="border-gray-200">
+                         <p class="font-semibold text-lg">Anúncios de Pesquisa Intermediários com IA</p>
+                         <p class="text-sm text-gray-600">Skillshop - 2024</p>
+                         <hr class="border-gray-200">
+                         <p class="font-semibold text-lg">Gestão Empresarial</p>
+                         <p class="text-sm text-gray-600">Instituto Brasileiro De Terapias Holísticas - 2025</p>
+                    </div>
+                </div>
+
             </div>
+        </section>
+        
+        <section id="final-cta" class="text-center py-12 px-8 bg-secondary-accent/20 rounded-3xl shadow-neum-convex max-w-4xl mx-auto">
+             <h3 class="text-3xl font-bold text-text-dark mb-4">Pronta para Impulsionar Seus Resultados?</h3>
+             <p class="text-xl text-gray-700 mb-8">Não perca mais tempo com contas vulneráveis e campanhas sem foco. Agende uma conversa hoje mesmo.</p>
+             
+             <a href="mailto:wanessakarenn@gmail.com" class="inline-block py-3 px-10 text-xl rounded-full text-white font-bold bg-primary-accent hover:bg-[#c26a51] transition-colors duration-300 neum-cta-button">
+                 Fale Comigo Agora <i class="fa-solid fa-arrow-right ml-2"></i>
+             </a>
         </section>
 
     </main>
 
-    <footer class="bg-neum-base border-t border-gray-100/50 mt-12 p-8 shadow-neum-convex rounded-t-3xl">
-        <div class="container mx-auto px-6 py-6 text-center text-gray-600">
-            <p>&copy; 2025 Wanessa Karen Pereira Pacheco. Todos os direitos reservados.</p>
-            <p class="text-sm mt-2">Este currículo interativo foi gerado para facilitar a visualização de minhas qualificações, utilizando o estilo Neumorfismo.</p>
+    <footer class="bg-neum-base mt-12 py-8 border-t border-gray-100/50">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="mailto:wanessakarenn@gmail.com" class="hover:text-primary-accent transition-colors duration-300">
+                    <i class="fa-solid fa-envelope"></i> E-mail
+                </a>
+                <a href="tel:+5562982294758" class="hover:text-primary-accent transition-colors duration-300">
+                    <i class="fa-solid fa-phone"></i> (62) 98229-4758
+                </a>
+                <a href="https://www.linkedin.com/in/wanessa-karen-b70264272/" target="_blank" class="hover:text-primary-accent transition-colors duration-300">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            <p class="text-sm mt-2">&copy; 2025 Wanessa Karen Pacheco | Desenvolvido como Landing Page de Conversão (Neumorfismo)</p>
         </div>
     </footer>
-
-    <script>
-        // Script do menu mobile e do Chart.js
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (menuBtn && mobileMenu) {
-                 menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-
-            // Dados das habilidades
-            const skillsData = {
-                labels: ['Gestão de Tráfego', 'Segurança de Contas', 'Estratégias de Vendas', 'Análise de Dados (GA/GTM)', 'Desenvolvimento Back-End (JS)'],
-                datasets: [{
-                    label: 'Nível de Proficiência',
-                    data: [95, 90, 85, 80, 75], // Níveis de 0 a 100
-                    backgroundColor: [
-                        '#E07A5F', // primary-accent
-                        '#81B29A', // secondary-accent
-                        '#F2CC85', // Tom neutro quente
-                        '#81B29A',
-                        '#E07A5F'
-                    ],
-                    // A cor da borda no Neumorphism deve ser a cor de fundo
-                    borderColor: '#FDFBF7',
-                    borderWidth: 1,
-                    borderRadius: 8 // Barras arredondadas
-                }]
-            };
-
-            const ctx = document.getElementById('skillsChart').getContext('2d');
-            
-            // Configurações do Chart.js para um visual mais clean (compatível com Neumorphism)
-            const skillsChart = new Chart(ctx, {
-                type: 'bar',
-                data: skillsData,
-                options: {
-                    indexAxis: 'y', // Barras horizontais
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    layout: {
-                        padding: 10
-                    },
-                    scales: {
-                        x: {
-                            beginAtZero: true,
-                            max: 100,
-                            grid: {
-                                display: false, // Remove linhas de grade
-                                drawBorder: false
-                            },
-                            ticks: {
-                                display: false // Remove números do eixo X
-                            }
-                        },
-                        y: {
-                            grid: {
-                                display: false,
-                                drawBorder: false
-                            },
-                            ticks: {
-                                color: '#3D405B', // Cor do texto
-                                font: {
-                                    size: 14
-                                }
-                            }
-                        }
-                    },
-                    plugins: {
-                        legend: {
-                            display: false // Remove a legenda
-                        },
-                        tooltip: {
-                            backgroundColor: 'rgba(61, 64, 91, 0.9)', // Fundo escuro
-                            titleColor: '#FFFFFF',
-                            bodyColor: '#FFFFFF',
-                            bodyFont: {
-                                size: 14
-                            },
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed.x !== null) {
-                                        label += context.parsed.x + '% de Proficiência';
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        });
-    </script>
 
 </body>
 
 </html>
-
