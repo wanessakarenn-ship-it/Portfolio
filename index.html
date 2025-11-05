@@ -7,103 +7,144 @@
     
     <style>
         /* Importação de Fonte */
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+        /* Variáveis CSS para Cores e Fontes */
+        :root {
+            --primary-color: #007bff; /* Azul vibrante para destaque */
+            --secondary-color: #17a2b8; /* Ciano para habilidades de dados */
+            --tertiary-color: #28a745; /* Verde para desenvolvimento */
+            --background-light: #f8f9fa; /* Fundo muito claro */
+            --text-dark: #343a40; /* Texto escuro */
+            --text-medium: #6c757d; /* Texto médio (datas, detalhes) */
+            --border-light: #e9ecef;
+            --font-family-main: 'Montserrat', sans-serif;
+        }
 
         /* Estilos Globais e Reset Básico */
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: var(--font-family-main);
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--background-light);
+            color: var(--text-dark);
             line-height: 1.6;
         }
 
         main {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 960px; /* Maior largura em desktop */
+            margin: 0 auto; /* Remove margem superior e inferior em mobile */
+            padding: 20px 15px; /* Padding interno consistente */
+            box-sizing: border-box;
         }
 
         /* Cabeçalho */
         header {
-            background-color: #0056b3;
+            background-color: var(--primary-color);
             color: white;
-            padding: 30px 20px;
+            padding: 30px 15px;
             text-align: center;
-            border-bottom: 5px solid #003d80;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
             margin: 0 0 5px 0;
-            font-size: 2.5em;
+            font-size: 1.8em; /* Mobile First: Tamanho menor em mobile */
             font-weight: 700;
+            letter-spacing: 1px;
         }
 
         header .title {
-            margin: 0 0 15px 0;
-            font-size: 1.2em;
-            font-weight: 300;
-        }
-
-        .contact-info a {
-            color: #ffffff;
-            text-decoration: none;
+            margin: 0 0 10px 0;
+            font-size: 1em; /* Mobile First */
             font-weight: 400;
         }
 
-        .contact-info a:hover {
+        .contact-info {
+            font-size: 0.9em;
+        }
+
+        .contact-info a {
+            color: white;
             text-decoration: underline;
         }
 
-        /* Títulos de Seções */
+        /* Seções e Títulos */
+        section {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px; /* Cantos arredondados modernos */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra suave */
+        }
+
         h2 {
-            color: #0056b3;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 5px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.6em;
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--border-light);
+            padding-bottom: 8px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.4em; /* Mobile First */
+            font-weight: 600;
         }
 
-        /* Seção de Perfil */
-        .profile p {
-            margin-bottom: 10px;
-        }
-
+        /* Perfil */
         .profile ul {
-            list-style-type: square;
-            margin-left: 20px;
+            list-style-type: none; /* Remove marcadores padrão */
             padding-left: 0;
+        }
+
+        .profile ul li {
+            padding-left: 1.5em;
+            text-indent: -1.5em;
+            margin-bottom: 5px;
+        }
+        .profile ul li::before {
+            content: "•"; /* Ícone de marcador moderno */
+            color: var(--primary-color);
+            font-weight: bold;
+            display: inline-block;
+            width: 1.5em;
         }
 
         /* Experiência e Educação */
         .job, .course {
             margin-bottom: 20px;
-            padding-left: 15px;
-            border-left: 3px solid #0056b3;
+            padding-left: 0;
+            border-left: none; /* Remove linha lateral para design mais limpo */
         }
 
         .job h3, .course h3 {
-            margin: 0 0 5px 0;
-            color: #555;
-            font-size: 1.2em;
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1.1em;
+            font-weight: 600;
         }
 
         .dates, .institution {
             font-style: italic;
-            color: #777;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 0.9em;
+            color: var(--text-medium);
+            margin: 5px 0 10px 0;
+            font-size: 0.85em;
+        }
+        
+        .job ul {
+            list-style-type: none;
+            padding-left: 0;
         }
 
-        .job ul {
-            margin-top: 5px;
-            margin-bottom: 0;
-            padding-left: 20px;
+        .job ul li {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 5px;
+        }
+        .job ul li::before {
+            content: "→";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
 
         /* Certificações */
@@ -113,56 +154,57 @@
         }
 
         .certifications li {
-            background-color: #f9f9f9;
-            padding: 8px 10px;
-            margin-bottom: 5px;
-            border-radius: 4px;
-            border-left: 4px solid #00aaff;
+            background-color: var(--background-light);
+            padding: 10px 15px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            border-left: 5px solid var(--secondary-color);
+            font-size: 0.95em;
         }
-
-        /* --- Estilos da Seção de Habilidades (Skills) --- */
+        
+        /* --- Habilidades (Modernizado e Mobile First) --- */
 
         .skills-category {
             margin-top: 25px;
-            margin-bottom: 35px;
-            padding: 20px;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 25px;
+            padding: 0; /* Remove padding extra */
+            border: none;
+            border-radius: 0;
+            background-color: transparent;
+            box-shadow: none;
         }
 
         .skills-category h3 {
-            color: #0056b3;
-            font-size: 1.2em;
-            border-bottom: 2px solid #e0e0e0;
-            padding-bottom: 8px;
-            margin-top: 0;
-            margin-bottom: 20px;
-            font-weight: 700;
+            color: var(--primary-color);
+            font-size: 1.1em;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 600;
         }
 
+        /* Mobile First: layout em coluna para telas pequenas */
         .skill-item {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column; 
+            align-items: flex-start;
             margin-bottom: 15px;
         }
 
         .skill-name {
-            flex: 0 0 40%;
+            width: 100%; /* Ocupa a largura total em mobile */
             font-weight: 500;
-            color: #333;
-            font-size: 1em;
+            color: var(--text-dark);
+            margin-bottom: 5px;
         }
 
-        /* Contêiner da Barra de Progresso (Trilha) */
+        /* Contêiner da Barra de Progresso */
         .progress-container {
-            flex: 0 0 55%;
-            background-color: #f0f0f0;
+            width: 100%; /* Ocupa a largura total em mobile */
+            background-color: var(--border-light);
             border-radius: 50px;
             overflow: hidden;
-            height: 18px;
+            height: 12px; /* Barras mais finas e elegantes */
             position: relative;
         }
 
@@ -171,78 +213,85 @@
             height: 100%;
             color: white;
             text-align: right;
-            padding-right: 10px;
-            line-height: 18px;
-            font-size: 0.8em;
+            padding-right: 8px;
+            line-height: 12px;
+            font-size: 0.7em;
             font-weight: 600;
-            width: 0; /* Largura inicial zero para o efeito de "carregamento" */
+            width: 0;
             animation: fill-bar 1.5s ease-out forwards;
         }
 
-        /* Estilos de cor por categoria */
-        /* Marketing Digital & Tráfego Pago (Azul) */
+        /* Cores das Barras */
         .skills-category:nth-child(1) .progress-bar {
-            background: linear-gradient(to right, #007bff, #0056b3);
+            background: var(--primary-color);
         }
 
-        /* Análise de Dados & Otimização (Ciano) */
         .skills-category:nth-child(2) .progress-bar {
-            background: linear-gradient(to right, #17a2b8, #138496);
+            background: var(--secondary-color);
         }
 
-        /* Desenvolvimento & Automação (Verde - Foco Back-End) */
         .progress-bar.development {
-            background: linear-gradient(to right, #28a745, #1e7e34);
+            background: var(--tertiary-color);
         }
 
         /* Keyframes para o efeito de carregamento */
         @keyframes fill-bar {
             0% { width: 0; }
-            /* 100% da largura é definida pelo estilo inline no HTML */
         }
 
         /* Rodapé */
         footer {
             text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-            color: #777;
+            padding: 15px;
+            background-color: var(--text-dark);
+            color: white;
             font-size: 0.8em;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        /* Responsividade Final (Mobile First) */
-        @media (max-width: 600px) {
-            main {
-                margin: 10px;
-                padding: 10px;
-            }
+        /* Media Query para Tablet/Desktop (Melhorias no Layout) */
+        @media (min-width: 768px) {
             header h1 {
-                font-size: 1.8em;
+                font-size: 3em;
             }
+
             header .title {
-                font-size: 1em;
+                font-size: 1.2em;
             }
+
+            main {
+                padding: 30px;
+            }
+
+            /* Layout de 2 colunas para Habilidades em Desktop */
             .skills-category {
-                padding: 15px;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
+                gap: 20px 40px; /* Espaçamento entre as barras */
+                align-items: center;
+                margin-top: 15px;
+                padding: 0;
             }
+            
+            .skills-category h3 {
+                grid-column: 1 / -1; /* Título ocupa toda a largura */
+                margin-bottom: 25px;
+            }
+
             .skill-item {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row; /* Volta para layout em linha */
+                justify-content: space-between;
             }
-            .skill-name, .progress-container {
-                flex: 0 0 100%;
-                width: 100%;
-            }
+
             .skill-name {
-                margin-bottom: 5px;
+                width: auto;
+                flex: 0 0 40%;
+                margin-bottom: 0;
             }
+
             .progress-container {
-                margin-bottom: 10px;
-                height: 15px;
-            }
-            .progress-bar {
-                line-height: 15px;
-                font-size: 0.75em;
+                flex: 0 0 55%;
             }
         }
     </style>
