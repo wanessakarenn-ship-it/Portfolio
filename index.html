@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page - Contrate Wanessa Karen | Tráfego Pago & Segurança</title>
-    
+    <title>Wanessa Karen | Desenvolvedora Back-End & Performance</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
@@ -16,255 +12,101 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    // Cor de fundo Neumorphism: #FDFBF7
                     colors: {
                         'neum-base': '#FDFBF7',
-                        'primary-accent': '#E07A5F', // Cor original de destaque (CTA principal)
-                        'secondary-accent': '#81B29A', // Cor de apoio (Sucesso/Confirmação)
-                        'text-dark': '#3D405B', // Cor original do texto
+                        'primary-accent': '#E07A5F',
+                        'secondary-accent': '#81B29A',
+                        'text-dark': '#3D405B',
                     },
-                    // Sombra Neumorphism
                     boxShadow: {
-                        // Sombra de relevo (Convex) - Parece que está "saindo"
                         'neum-convex': '8px 8px 16px #D9D7D3, -8px -8px 16px #FFFFFF',
-                        // Sombra de "afundar" (Concave) - Para botões pressionados ou inputs
-                        'neum-concave': 'inset 5px 5px 10px #D9D7D3, inset -5px -5px 10px #FFFFFF',
-                        // Sombra sutil para itens menores
                         'neum-soft': '3px 3px 6px #D9D7D3, -3px -3px 6px #FFFFFF',
-                    },
+                    }
                 }
             }
         }
     </script>
-
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #FDFBF7; /* Cor de fundo Neumorphism */
-            color: #3D405B;
-        }
-        /* Classe para o botão CTA Neumorfismo */
-        .neum-cta-button {
-            box-shadow: 10px 10px 20px #D9D7D3, -10px -10px 20px #FFFFFF;
-            transition: all 0.2s ease-in-out;
-        }
-        /* Efeito de "pressionar" (Concave) ao interagir com o CTA */
-        .neum-cta-button:active {
-            box-shadow: inset 5px 5px 10px #D9D7D3, inset -5px -5px 10px #FFFFFF;
-            transform: scale(0.98);
-        }
-        /* Para input (se fosse um formulário) */
-        .neum-input {
-            box-shadow: inset 3px 3px 6px #D9D7D3, inset -3px -3px 6px #FFFFFF;
-        }
-        
-        /* Ajustando a Linha do Tempo para Neumorfismo */
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -3rem; 
-            top: 0.5rem;
-            width: 1.5rem;
-            height: 1.5rem;
-            border-radius: 50%;
-            background-color: #81B29A;
-            box-shadow: 3px 3px 6px #D9D7D3, -3px -3px 6px #FFFFFF;
-            border: 5px solid #FDFBF7; 
-        }
-
-        .timeline-item {
-            margin-left: 1rem;
-        }
+        body { font-family: 'Inter', sans-serif; background-color: #FDFBF7; color: #3D405B; }
+        .neum-cta-button { box-shadow: 10px 10px 20px #D9D7D3, -10px -10px 20px #FFFFFF; transition: all 0.2s; }
+        .neum-cta-button:active { transform: scale(0.98); box-shadow: inset 5px 5px 10px #D9D7D3, inset -5px -5px 10px #FFFFFF; }
+        .timeline-item::before { content: ''; position: absolute; left: -3rem; top: 0.5rem; width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #81B29A; box-shadow: 3px 3px 6px #D9D7D3, -3px -3px 6px #FFFFFF; border: 5px solid #FDFBF7; }
     </style>
-
 </head>
 
 <body class="antialiased">
 
-    <header class="bg-neum-base sticky top-0 z-50 border-b border-gray-100/50">
+    <header class="bg-neum-base sticky top-0 z-50 border-b border-gray-200/50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-black text-text-dark">WANESSA K.</h1>
-            </div>
-            <a href="https://wa.me/5562982294758?text=Olá,%20Wanessa!%20Vi%20sua%20Landing%20Page%20e%20tenho%20interesse%20em%20discutir%20uma%20oportunidade.%20Podemos%20agendar%20uma%20conversa?" target="_blank" class="py-2 px-6 rounded-full text-white font-semibold bg-secondary-accent hover:bg-[#6e9b86] transition-colors duration-300 neum-cta-button">
-                <i class="fa-brands fa-whatsapp"></i> Iniciar Chat
+            <h1 class="text-xl font-black text-text-dark tracking-tighter">WANESSA KAREN</h1>
+            <a href="https://wa.me/5562982294758" target="_blank" class="py-2 px-6 rounded-full text-white font-semibold bg-secondary-accent hover:bg-[#6e9b86] neum-cta-button">
+                <i class="fa-brands fa-whatsapp mr-2"></i> Iniciar Chat
             </a>
         </div>
     </header>
 
     <main class="container mx-auto px-6 py-16">
-
-        <section id="hero-conversion" class="text-center mb-24 max-w-5xl mx-auto bg-neum-base p-12 rounded-3xl shadow-neum-convex">
-            
-            <span class="text-xl md:text-2xl font-medium text-secondary-accent mb-4 block">
-                <i class="fa-solid fa-shield-halved"></i> Mais de 5 Anos em Tráfego Pago
-            </span>
-
-            <h2 class="text-5xl md:text-7xl font-black text-text-dark leading-tight mb-6">
-                Reduza Bloqueios. <span class="text-primary-accent">Aumente o ROAS.</span>
+        <section id="hero" class="text-center mb-24 max-w-4xl mx-auto bg-neum-base p-10 md:p-16 rounded-3xl shadow-neum-convex">
+            <span class="text-secondary-accent font-bold tracking-widest uppercase text-sm mb-4 block">Especialista em Performance & Tech</span>
+            <h2 class="text-4xl md:text-6xl font-black text-text-dark leading-tight mb-6">
+                Código, Dados e <span class="text-primary-accent">Resultados.</span>
             </h2>
-
-            <p class="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto mb-10">
-                Especialista em segurança e estruturação de contas de anúncios. Transformo processos fragmentados em estratégias de conversão de leads e vendas, com foco em resultados mensuráveis e sustentáveis.
+            <p class="text-lg md:text-xl text-gray-700 mb-10">
+                7 anos de experiência em gestão de tráfego unida à formação técnica em <strong>Back-End JavaScript</strong>. Transformo inteligência de dados em aplicações escaláveis.
             </p>
-
-            <a href="https://www.linkedin.com/in/wanessa-karen-b70264272/" target="_blank" class="inline-block py-4 px-12 text-2xl rounded-full text-white font-extrabold bg-primary-accent hover:bg-[#c26a51] transition-colors duration-300 neum-cta-button">
-                <i class="fa-brands fa-linkedin"></i> Veja Meu Histórico Completo
+            <a href="#experiencia" class="inline-block py-4 px-10 text-lg rounded-full text-white font-bold bg-primary-accent hover:bg-[#c26a51] neum-cta-button">
+                Ver trajetória técnica
             </a>
-            
-            <p class="text-sm text-gray-500 mt-4">Ou envie um e-mail para agendar uma conversa em <a href="mailto:wanessakarenn@gmail.com" class="text-primary-accent underline">wanessakarenn@gmail.com</a></p>
-
         </section>
 
-        <section id="especialidades" class="mb-20">
-            <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
-                <i class="fa-solid fa-gears text-secondary-accent mr-3"></i> Minhas Áreas de Foco
-            </h3>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                
-                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
-                    <i class="fa-solid fa-lock text-5xl text-secondary-accent mb-4"></i>
-                    <h4 class="text-xl font-bold mb-3 text-text-dark">Segurança Antifraude</h4>
-                    <p class="text-gray-700">Aplicação rigorosa de boas práticas para prevenir bloqueios, invasões e perdas de ativos em plataformas de anúncios.</p>
-                </div>
-
-                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
-                    <i class="fa-solid fa-chart-line text-5xl text-primary-accent mb-4"></i>
-                    <h4 class="text-xl font-bold mb-3 text-text-dark">Estratégias de Alto ROAS</h4>
-                    <p class="text-gray-700">Desenvolvimento e implementação de funis digitais focados em performance, otimização de leads e vendas mensuráveis.</p>
-                </div>
-
-                <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
-                    <i class="fa-solid fa-code text-5xl text-secondary-accent mb-4"></i>
-                    <h4 class="text-xl font-bold mb-3 text-text-dark">Integração Tech & Ads</h4>
-                    <p class="text-gray-700">Especialização em Back-End (JavaScript) para integrar automação e inteligência de dados nas campanhas de marketing.</p>
-                </div>
-
+        <section id="especialidades" class="mb-24 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
+                <i class="fa-solid fa-code text-4xl text-secondary-accent mb-4"></i>
+                <h4 class="font-bold mb-2">Back-End Dev</h4>
+                <p class="text-sm text-gray-600">Node.js, TypeScript e Engenharia de Software focada em escalabilidade.</p>
+            </div>
+            <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
+                <i class="fa-solid fa-shield-halved text-4xl text-primary-accent mb-4"></i>
+                <h4 class="font-bold mb-2">Segurança de Ativos</h4>
+                <p class="text-sm text-gray-600">Gestão avançada de tráfego pago com foco em resiliência e redução de bloqueios.</p>
+            </div>
+            <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
+                <i class="fa-solid fa-chart-line text-4xl text-secondary-accent mb-4"></i>
+                <h4 class="font-bold mb-2">Performance & IA</h4>
+                <p class="text-sm text-gray-600">Especialista certificada Google Ads com uso estratégico de Inteligência Artificial.</p>
             </div>
         </section>
 
-        <section id="experiencia" class="mb-20 max-w-4xl mx-auto">
-            <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
-                <i class="fa-solid fa-briefcase text-primary-accent mr-3"></i> Experiência Comprovada
-            </h3>
-            
-            <div class="relative border-l-2 border-secondary-accent/50 pl-12">
-                
-                <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark">Gestora de Tráfego Pago | Cia g3</p>
-                    <p class="text-sm text-gray-500 mb-3">Abril 2023 – Maio 2025</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Liderança em Segurança de Contas: Gestão completa de campanhas, implementando estruturação e protocolos de segurança de ponta para reduzir bloqueios e invasões.</li>
-                        <li>Otimização de Performance: Estruturação e implementação de funis digitais orientados a resultados, focados em elevado ROAS e na conversão de leads de alto valor.</li>
-                    </ul>
-                </div>
-
+        <section id="experiencia" class="mb-20 max-w-3xl mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-12 text-text-dark">Formação Acadêmica & Residência</h3>
+            <div class="relative border-l-2 border-secondary-accent/50 pl-10 space-y-12">
                 <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark">Gerente de Marketing Digital | SOUB Digital</p>
-                    <p class="text-sm text-gray-500 mb-3">Janeiro 2019 – Outubro 2021</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Estratégia Full Funnel: Responsável por todo o ciclo de Marketing Digital, desde o planejamento até o monitoramento para otimizar o funil de vendas.</li>
-                        <li>Especialização em Conversão: Desenho e execução de estratégias de aquisição e qualificação de leads, resultando em crescimento consistente de vendas.</li>
-                        <li>Inteligência de Dados: Utilização avançada do Google Analytics (GA4) para análise aprofundada de comportamento e tomada de decisão estratégica.</li>
-                        <li>Rastreamento de Precisão: Proficiência em Google Tag Manager para implementação e validação de tags, garantindo a precisão dos dados de rastreamento.</li>
-                    </ul>
+                    <p class="font-bold text-text-dark">Programa Residência Back-End JavaScript (200h)</p>
+                    <p class="text-sm text-secondary-accent font-semibold mb-2">Softex Pernambuco | 2025</p>
+                    <p class="text-sm text-gray-600">Formação intensiva em Node.js, TypeScript, Padrões de Projeto, Git e Banco de Dados.</p>
                 </div>
-
-            </div>
-        </section>
-
-      <section id="formacao" class="mb-20 max-w-4xl mx-auto">
-             <h3 class="text-4xl font-bold text-center mb-12 text-text-dark">
-                <i class="fa-solid fa-graduation-cap text-secondary-accent mr-3"></i> Alinhamento e Formação
-            </h3>
-            
-            <div class="relative border-l-2 border-secondary-accent/50 pl-12">
-                
-                <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark flex items-center justify-between">
-                        Marketing Digital (Formação Superior)
-                        <span class="text-sm text-secondary-accent font-medium"><i class="fa-solid fa-hourglass-start mr-1"></i> Cursando</span>
-                    </p>
-                    <p class="text-sm text-gray-500 mb-3">Unniasselvi</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Foco em planejamento estratégico, análise de métricas avançadas e funis de conversão digital.</li>
-                    </ul>
-                </div>
-
-                <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark flex items-center justify-between">
-                        Back-End JavaScript (Formação Superior)
-                        <span class="text-sm text-secondary-accent font-medium"><i class="fa-solid fa-hourglass-start mr-1"></i> Cursando</span>
-                    </p>
-                    <p class="text-sm text-gray-500 mb-3">Softex Penanbuco / Instituto Federal</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Aplicação de habilidades de codificação para otimização e automação de campanhas de tráfego.</li>
-                    </ul>
-                </div>
-                
-                <h4 class="text-xl font-bold text-text-dark mt-8 mb-4">Certificações e Especializações Recentes:</h4>
-
-                <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark">Google Ads Search: Estrategista IA</p>
-                    <p class="text-sm text-gray-500 mb-3">Skillshop - 2024</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Proficiência em anúncios de pesquisa com tecnologia de Inteligência Artificial e Recursos de publicidade do Google.</li>
-                    </ul>
-                </div>
-
-                <div class="mb-12 timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark">Marketing Digital: Curso Completo</p>
-                    <p class="text-sm text-gray-500 mb-3">IFMS / Udemy - 2025</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Visão 360º em estratégias de funil, SEO, redes sociais e ferramentas de automação (Consolida dois itens anteriores).</li>
-                    </ul>
-                </div>
-                
                 <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-lg text-text-dark">Desenvolvimento de Sistemas e Web</p>
-                    <p class="text-sm text-gray-500 mb-3">IFG / Udemy - 2025</p>
-                    <ul class="list-disc list-inside text-gray-600 space-y-1">
-                        <li>Conhecimento em Ruby on Rails e Análise de Sistemas, fortalecendo a integração entre marketing e desenvolvimento.</li>
-                    </ul>
+                    <p class="font-bold text-text-dark">Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+                    <p class="text-sm text-secondary-accent font-semibold mb-2">Uniasselvi | Em curso</p>
                 </div>
-                
+                <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
+                    <p class="font-bold text-text-dark">Certificação Google Ads (Search, IA, Shopping & Apps)</p>
+                    <p class="text-sm text-secondary-accent font-semibold mb-2">Google Skillshop | 2024-2025</p>
+                </div>
             </div>
         </section>
-        
-        <section id="final-cta" class="text-center py-12 px-8 bg-secondary-accent/20 rounded-3xl shadow-neum-convex max-w-4xl mx-auto">
-             <h3 class="text-3xl font-bold text-text-dark mb-4">Pronta para Impulsionar Seus Resultados?</h3>
-             <p class="text-xl text-gray-700 mb-8">Reduza vulnerabilidades de contas e comece a focar em crescimento. Clique e inicie a conversa:</p>
-             
-             <a href="https://wa.me/5562982294758?text=Olá,%20Wanessa!%20Vi%20sua%20Landing%20Page%20e%20tenho%20interesse%20em%20discutir%20uma%20oportunidade.%20Podemos%20agendar%20uma%20conversa?" target="_blank" class="inline-block py-3 px-10 text-xl rounded-full text-white font-bold bg-secondary-accent hover:bg-[#6e9b86] transition-colors duration-300 neum-cta-button">
-                 <i class="fa-brands fa-whatsapp mr-2"></i> Iniciar Conversa no WhatsApp
-             </a>
-        </section>
 
+        <section class="text-center py-16 bg-secondary-accent/10 rounded-3xl">
+            <h3 class="text-3xl font-bold text-text-dark mb-4">Vamos conectar tecnologia e resultados?</h3>
+            <a href="https://wa.me/5562982294758" target="_blank" class="inline-block py-4 px-12 text-lg rounded-full text-white font-bold bg-secondary-accent neum-cta-button">
+                Enviar Mensagem
+            </a>
+        </section>
     </main>
 
-    <footer class="bg-neum-base mt-12 py-8 border-t border-gray-100/50">
-        <div class="container mx-auto px-6 text-center text-gray-600">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="mailto:wanessakarenn@gmail.com" class="hover:text-primary-accent transition-colors duration-300">
-                    <i class="fa-solid fa-envelope"></i> E-mail
-                </a>
-                <a href="tel:+5562982294758" class="hover:text-primary-accent transition-colors duration-300">
-                    <i class="fa-solid fa-phone"></i> (62) 98229-4758
-                </a>
-                <a href="https://www.linkedin.com/in/wanessa-karen-b70264272/" target="_blank" class="hover:text-primary-accent transition-colors duration-300">
-                    <i class="fa-brands fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
-            <p class="text-sm mt-2">&copy; 2025 Wanessa Karen Pacheco | Desenvolvido como Landing Page de Conversão (Neumorfismo)</p>
-        </div>
+    <footer class="text-center py-10 text-gray-500 text-sm">
+        <p>&copy; 2026 Wanessa Karen Pacheco | Desenvolvida com Foco em Performance</p>
     </footer>
 
 </body>
-
 </html>
-
-
-
-
-
