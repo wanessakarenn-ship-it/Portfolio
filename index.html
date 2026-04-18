@@ -1,112 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wanessa Karen | Desenvolvedora Back-End & Performance</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wanessa Karen | Marketing Digital, Google Ads e Desenvolvimento Back-End</title>
+  <meta
+    name="description"
+    content="Portfólio profissional de Wanessa Karen: Marketing Digital, Google Ads, Performance, Back-End JavaScript, ADS e tecnologia aplicada a resultados."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  />
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'neum-base': '#FDFBF7',
-                        'primary-accent': '#E07A5F',
-                        'secondary-accent': '#81B29A',
-                        'text-dark': '#3D405B',
-                    },
-                    boxShadow: {
-                        'neum-convex': '8px 8px 16px #D9D7D3, -8px -8px 16px #FFFFFF',
-                        'neum-soft': '3px 3px 6px #D9D7D3, -3px -3px 6px #FFFFFF',
-                    }
-                }
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              dark: '#0F172A',
+              slate: '#1E293B',
+              soft: '#475569',
+              line: '#E2E8F0',
+              light: '#F8FAFC',
+              primary: '#2563EB',
+              primaryDark: '#1D4ED8',
+              secondary: '#0F766E',
+              accent: '#7C3AED'
             }
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(15, 23, 42, 0.08)',
+            card: '0 12px 40px rgba(15, 23, 42, 0.10)'
+          },
+          maxWidth: {
+            content: '1200px'
+          }
         }
-    </script>
-    <style>
-        body { font-family: 'Inter', sans-serif; background-color: #FDFBF7; color: #3D405B; }
-        .neum-cta-button { box-shadow: 10px 10px 20px #D9D7D3, -10px -10px 20px #FFFFFF; transition: all 0.2s; }
-        .neum-cta-button:active { transform: scale(0.98); box-shadow: inset 5px 5px 10px #D9D7D3, inset -5px -5px 10px #FFFFFF; }
-        .timeline-item::before { content: ''; position: absolute; left: -3rem; top: 0.5rem; width: 1.5rem; height: 1.5rem; border-radius: 50%; background-color: #81B29A; box-shadow: 3px 3px 6px #D9D7D3, -3px -3px 6px #FFFFFF; border: 5px solid #FDFBF7; }
-    </style>
-</head>
+      }
+    }
+  </script>
 
-<body class="antialiased">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #0f172a;
+    }
 
-    <header class="bg-neum-base sticky top-0 z-50 border-b border-gray-200/50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-black text-text-dark tracking-tighter">WANESSA KAREN</h1>
-            <a href="https://wa.me/5562982294758" target="_blank" class="py-2 px-6 rounded-full text-white font-semibold bg-secondary-accent hover:bg-[#6e9b86] neum-cta-button">
-                <i class="fa-brands fa-whatsapp mr-2"></i> Iniciar Chat
-            </a>
-        </div>
-    </header>
+    .hero-grid {
+      background:
+        radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(124, 58, 237, 0.12), transparent 30%),
+        linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    }
 
-    <main class="container mx-auto px-6 py-16">
-        <section id="hero" class="text-center mb-24 max-w-4xl mx-auto bg-neum-base p-10 md:p-16 rounded-3xl shadow-neum-convex">
-            <span class="text-secondary-accent font-bold tracking-widest uppercase text-sm mb-4 block">Especialista em Performance & Tech</span>
-            <h2 class="text-4xl md:text-6xl font-black text-text-dark leading-tight mb-6">
-                Código, Dados e <span class="text-primary-accent">Resultados.</span>
-            </h2>
-            <p class="text-lg md:text-xl text-gray-700 mb-10">
-                7 anos de experiência em gestão de tráfego unida à formação técnica em <strong>Back-End JavaScript</strong>. Transformo inteligência de dados em aplicações escaláveis.
-            </p>
-            <a href="#experiencia" class="inline-block py-4 px-10 text-lg rounded-full text-white font-bold bg-primary-accent hover:bg-[#c26a51] neum-cta-button">
-                Ver trajetória técnica
-            </a>
-        </section>
+    .glass {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.78);
+    }
 
-        <section id="especialidades" class="mb-24 grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
-                <i class="fa-solid fa-code text-4xl text-secondary-accent mb-4"></i>
-                <h4 class="font-bold mb-2">Back-End Dev</h4>
-                <p class="text-sm text-gray-600">Node.js, TypeScript e Engenharia de Software focada em escalabilidade.</p>
-            </div>
-            <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
-                <i class="fa-solid fa-shield-halved text-4xl text-primary-accent mb-4"></i>
-                <h4 class="font-bold mb-2">Segurança de Ativos</h4>
-                <p class="text-sm text-gray-600">Gestão avançada de tráfego pago com foco em resiliência e redução de bloqueios.</p>
-            </div>
-            <div class="bg-neum-base p-8 rounded-3xl shadow-neum-convex text-center">
-                <i class="fa-solid fa-chart-line text-4xl text-secondary-accent mb-4"></i>
-                <h4 class="font-bold mb-2">Performance & IA</h4>
-                <p class="text-sm text-gray-600">Especialista certificada Google Ads com uso estratégico de Inteligência Artificial.</p>
-            </div>
-        </section>
-
-        <section id="experiencia" class="mb-20 max-w-3xl mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-12 text-text-dark">Formação Acadêmica & Residência</h3>
-            <div class="relative border-l-2 border-secondary-accent/50 pl-10 space-y-12">
-                <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-text-dark">Programa Residência Back-End JavaScript (200h)</p>
-                    <p class="text-sm text-secondary-accent font-semibold mb-2">Softex Pernambuco | 2025</p>
-                    <p class="text-sm text-gray-600">Formação intensiva em Node.js, TypeScript, Padrões de Projeto, Git e Banco de Dados.</p>
-                </div>
-                <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-text-dark">Tecnologia em Análise e Desenvolvimento de Sistemas</p>
-                    <p class="text-sm text-secondary-accent font-semibold mb-2">Uniasselvi | Em curso</p>
-                </div>
-                <div class="timeline-item bg-neum-base p-6 rounded-2xl shadow-neum-soft">
-                    <p class="font-bold text-text-dark">Certificação Google Ads (Search, IA, Shopping & Apps)</p>
-                    <p class="text-sm text-secondary-accent font-semibold mb-2">Google Skillshop | 2024-2025</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="text-center py-16 bg-secondary-accent/10 rounded-3xl">
-            <h3 class="text-3xl font-bold text-text-dark mb-4">Vamos conectar tecnologia e resultados?</h3>
-            <a href="https://wa.me/5562982294758" target="_blank" class="inline-block py-4 px-12 text-lg rounded-full text-white font-bold bg-secondary-accent neum-cta-button">
-                Enviar Mensagem
-            </a>
-        </section>
-    </main>
-
-    <footer class="text-center py-10 text-gray-500 text-sm">
-        <p>&copy; 2026 Wanessa Karen Pacheco | Desenvolvida com Foco em Performance</p>
-    </footer>
-
-</body>
-</html>
+    .section-title::after {
+      content: '';
