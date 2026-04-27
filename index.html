@@ -140,6 +140,21 @@
     .mobile-menu.open {
       max-height: 520px;
     }
+
+    section {
+      scroll-margin-top: 92px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    @media (max-width: 640px) {
+      .section-title::after {
+        width: 64px;
+      }
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-brand-primary/20 selection:text-brand-dark">
@@ -257,7 +272,7 @@
                 <img
                   src="https://i.ibb.co/dwrdns1z/eu.png"
                   alt="Retrato profissional de Wanessa Karen"
-                  class="h-full w-full object-cover"
+                  class="aspect-[4/5] h-full w-full object-cover"
                 />
               </div>
             </div>
@@ -293,9 +308,9 @@
               Movida pelo desejo de evoluir e ampliar minha capacidade de impacto, iniciei minha transição para a área de tecnologia, direcionando minha formação para desenvolvimento de software e análise de sistemas. Hoje, uno conhecimento técnico e visão estratégica para criar soluções que não apenas funcionam, mas resolvem problemas reais e sustentam crescimento.
             </p>
             <p>
-              Minha formação combina teoria, prática intensiva e atualização constante, com destaque para residência em Back-End JavaScript, estudos em Análise e Desenvolvimento de Sistemas, certificações em Google Ads, Marketing Digital e especializações complementares em tecnologia e performance.
+              Minha formação combina teoria, prática intensiva e atualização constante, com destaque para residência em Back-End JavaScript, estudos em Análise e Desenvolvimento de Sistemas e especializações complementares em tecnologia e performance.
             </p>
-            <p class="font-bold text-brand-dark border-l-4 border-brand-primary pl-4 py-1 bg-brand-primary/5 rounded-r-lg">
+            <p class="font-medium text-brand-dark">
               Meu diferencial está em conectar marketing, desenvolvimento, dados e estratégia em uma mesma visão de negócio, tornando meu perfil mais adaptável, atual e competitivo.
             </p>
           </div>
@@ -447,7 +462,7 @@
       </div>
 
       <div class="timeline relative ml-1 space-y-8 pl-10">
-        <!-- Residência -->
+        <!-- Formação 1 (Bolsa Futuro Digital) -->
         <article class="reveal relative rounded-[24px] border border-brand-line/70 bg-white p-6 shadow-card hover:border-brand-primary/20 transition-all sm:p-8">
           <span class="timeline-dot"></span>
           <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
@@ -476,13 +491,13 @@
               </li>
               <li class="flex items-start gap-2">
                 <i class="fa-solid fa-check mt-1 text-brand-primary text-[10px]"></i>
-                <span><strong>Real World:</strong> Resolução de problemas reais (Cerrado Tech).</span>
+                <span><strong>Real World:</strong> Resolução de problemas e desafios em ambiente real (Cerrado Tech).</span>
               </li>
             </ul>
           </div>
         </article>
 
-        <!-- Graduação -->
+        <!-- Formação 2 (Uniasselvi) -->
         <article class="reveal relative rounded-[24px] border border-brand-line/70 bg-white p-6 shadow-card hover:border-brand-primary/20 transition-all sm:p-8">
           <span class="timeline-dot"></span>
           <p class="text-sm font-bold uppercase tracking-[0.18em] text-brand-primary">Graduação</p>
@@ -491,14 +506,14 @@
           <p class="mt-4 text-sm leading-7 text-brand-soft">Foco em engenharia de sistemas, lógica de programação e arquitetura de software.</p>
         </article>
 
-        <!-- Técnico IFG -->
+        <!-- Formação 3 (IFG) - AJUSTADA -->
         <article class="reveal relative rounded-[24px] border border-brand-line/70 bg-white p-6 shadow-card hover:border-brand-primary/20 transition-all sm:p-8">
           <span class="timeline-dot"></span>
           <p class="text-sm font-bold uppercase tracking-[0.18em] text-brand-primary">Técnico</p>
           <h3 class="mt-2 text-xl font-black text-brand-dark">Técnico em Transporte Rodoviário</h3>
           <p class="mt-1 text-sm font-bold text-brand-secondary">IFG - Instituto Federal de Educação, Ciência e Tecnologia de Goiás</p>
           <p class="mt-1 text-xs text-brand-soft">Conclusão: Junho de 2025</p>
-          <p class="mt-4 text-sm leading-7 text-brand-soft">Planejamento logístico e gestão operacional de frotas e transportes.</p>
+          <p class="mt-4 text-sm leading-7 text-brand-soft">Formação técnica com foco em planejamento logístico e gestão operacional de frotas e transportes terrestres.</p>
         </article>
       </div>
     </section>
@@ -520,17 +535,37 @@
           >
             <i class="fa-brands fa-whatsapp mr-2"></i>Chamar no WhatsApp
           </a>
+          <a
+            href="https://www.linkedin.com/in/wanessa-karen-b70264272"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex w-full items-center justify-center rounded-full border border-white/40 bg-white/10 px-7 py-4 text-sm font-bold text-white backdrop-blur transition hover:bg-white hover:text-brand-dark lg:w-auto"
+          </a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="border-t border-brand-line bg-white">
-    <div class="mx-auto flex max-w-content flex-col gap-3 px-4 py-8 text-sm text-brand-soft sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-      <p>© 2026 Wanessa Karen.</p>
-      <div class="flex gap-6">
-        <a href="https://linkedin.com" target="_blank" class="hover:text-brand-primary transition">LinkedIn</a>
-        <a href="https://github.com" target="_blank" class="hover:text-brand-primary transition">GitHub</a>
+    <div class="mx-auto flex max-w-content flex-col gap-5 px-4 py-8 text-sm text-brand-soft sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+      <p>© 2026 Wanessa Karen Pereira Pacheco.</p>
+      <div class="flex flex-wrap items-center gap-3">
+        <a
+          href="https://www.linkedin.com/in/wanessa-karen-b70264272"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-full border border-brand-line bg-white px-4 py-2 font-semibold text-brand-dark transition hover:border-brand-primary hover:text-brand-primary"
+        >
+          <i class="fa-brands fa-linkedin mr-2"></i>LinkedIn
+        </a>
+        <a
+          href="https://github.com/wanessakarenn-ship-it"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center rounded-full border border-brand-line bg-white px-4 py-2 font-semibold text-brand-dark transition hover:border-brand-primary hover:text-brand-primary"
+        >
+          <i class="fa-brands fa-github mr-2"></i>GitHub
+        </a>
       </div>
     </div>
   </footer>
@@ -551,23 +586,45 @@
 
     if (menuToggle && mobileMenu) {
       menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('open');
-        const expanded = mobileMenu.classList.contains('open');
-        menuToggle.setAttribute('aria-expanded', expanded);
-        menuToggle.innerHTML = expanded ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+        const isOpen = mobileMenu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        });
       });
     }
 
-    // Fechar menu mobile ao clicar em um link
-    document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        });
-    });
+    const navLinks = document.querySelectorAll('header a[href^="#"]');
+    const sections = document.querySelectorAll('main section[id]');
 
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
+    const updateActiveNav = () => {
+      const scrollPosition = window.scrollY + 130;
+      sections.forEach((section) => {
+        const id = section.getAttribute('id');
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        navLinks.forEach((link) => {
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.toggle('text-brand-primary', scrollPosition >= top && scrollPosition < bottom);
+          }
+        });
+      });
+    };
+
+    window.addEventListener('scroll', () => {
+      revealOnScroll();
+      updateActiveNav();
+    });
+    window.addEventListener('load', () => {
+      revealOnScroll();
+      updateActiveNav();
+    });
   </script>
 </body>
 </html>
