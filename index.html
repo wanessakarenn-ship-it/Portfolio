@@ -289,10 +289,52 @@
         transform: none;
       }
     }
+
+    /* Portfolio 2026 — editorial polish */
+    body { background: #f6f8fc; }
+    :focus-visible { outline: 3px solid #38bdf8; outline-offset: 4px; }
+    .site-container { max-width: 1200px; }
+    .hero-grid {
+      background: radial-gradient(ellipse at 78% 15%, rgba(56,189,248,.13), transparent 32%),
+                  radial-gradient(ellipse at 7% 100%, rgba(124,58,237,.07), transparent 48%),
+                  linear-gradient(135deg,#f7faff 0%,#eef4ff 50%,#f9fbff 100%);
+    }
+    .fluid-title { font-size: clamp(2.7rem, 5.5vw, 5.2rem); line-height: 1.02; letter-spacing: -.055em; text-wrap: balance; }
+    .fluid-section-title { text-wrap: balance; }
+    .hero-badge { background: rgba(255,255,255,.88); }
+    .portrait-frame { min-height: 375px; isolation: isolate; }
+    .portrait-image { display: block; width: 100%; height: clamp(375px, 42vw, 535px); object-fit: cover; object-position: center 29%; }
+    .portrait-caption { background: linear-gradient(180deg, transparent 0%, rgba(15,23,42,.88) 100%); }
+    #projetos article, #competencias article, #sobre article {
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    #projetos article:hover, #competencias article:hover, #sobre article:hover {
+      border-color: rgba(37,99,235,.24);
+      box-shadow: 0 22px 48px rgba(15,23,42,.095);
+    }
+    #projetos article { position: relative; overflow: hidden; }
+    #projetos article::before {
+      content: ''; position: absolute; inset: 0 auto 0 0; width: 4px;
+      background: linear-gradient(#2563eb,#7c3aed); opacity: .72;
+    }
+    @media (max-width: 1023px) {
+      .hero-grid .site-container { max-width: 760px; }
+      .hero-grid .hero-photo-wrap { max-width: 620px; }
+    }
+    @media (max-width: 639px) {
+      .fluid-title { font-size: clamp(2.35rem, 9.5vw, 3.3rem); }
+      .portrait-image { height: 420px; object-position: center 23%; }
+      .hero-grid .site-container { padding-top: 2rem; padding-bottom: 3rem; }
+      #projetos article { padding: 1.5rem; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #projetos article, #competencias article, #sobre article { transition: none; }
+    }
   </style>
 </head>
 
 <body class="antialiased selection:bg-brand-primary/20 selection:text-brand-dark">
+  <a href="#inicio" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-brand-dark">Pular para o conteúdo</a>
   <header class="sticky top-0 z-50 border-b border-brand-line/70 bg-white/85 backdrop-blur-xl">
     <div class="site-container flex min-h-[72px] items-center justify-between gap-3 py-3 lg:min-h-[80px]">
       <a href="#inicio" class="flex min-w-0 items-center gap-3" aria-label="Ir para o início do portfólio">
@@ -360,8 +402,8 @@
       <div class="pointer-events-none absolute inset-0 bg-grid bg-[length:28px_28px] opacity-60"></div>
 
       <div class="site-container relative z-10 grid items-center gap-10 py-12 sm:py-16 md:py-20 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)] lg:gap-14 lg:py-28">
-        <div class="reveal order-2 lg:order-1">
-          <span class="hero-badge mb-5 inline-flex max-w-full rounded-full border border-brand-primary/15 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary shadow-soft sm:text-sm">
+        <div class="reveal order-2 lg:order-1 lg:pr-4">
+          <span class="hero-badge mb-6 inline-flex max-w-full rounded-full border border-brand-primary/15 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary shadow-soft sm:text-sm">
             +7 anos em Marketing Digital
           </span>
 
@@ -369,7 +411,7 @@
             Tecnologia, marketing e soluções digitais orientadas a resultados.
           </h2>
 
-          <p class="mt-6 max-w-2xl text-[15px] leading-8 text-brand-soft sm:text-lg">
+          <p class="mt-7 max-w-2xl text-[15px] leading-8 text-brand-soft sm:text-lg">
             Conecto marketing digital, desenvolvimento web, dados e automação para criar soluções que unem estratégia e execução técnica.
           </p>
 
@@ -405,13 +447,14 @@
         </div>
 
         <div class="reveal order-1 lg:order-2">
-          <div class="hero-photo-wrap glass overflow-hidden rounded-[32px] border border-white/70 p-3 shadow-glow sm:p-5 lg:p-6">
+          <div class="hero-photo-wrap glass overflow-hidden rounded-[32px] border border-white/70 p-3 shadow-glow sm:p-4 lg:p-5">
             <div class="overflow-hidden rounded-[26px] bg-white shadow-soft sm:rounded-[28px]">
-              <div class="flex min-h-[350px] flex-col justify-center bg-brand-dark p-8 text-white sm:min-h-[420px] sm:p-12">
-                  <p class="text-xs font-bold uppercase tracking-[0.22em] text-sky-300">Portfólio profissional</p>
-                  <h3 class="mt-6 text-3xl font-black leading-tight sm:text-4xl">Da estratégia ao código.<br><span class="text-sky-300">Da ideia à execução.</span></h3>
-                  <p class="mt-6 text-sm leading-7 text-slate-300">Marketing, tecnologia, dados e automação em uma visão integrada de negócio.</p>
-                  <div class="mt-8 flex flex-wrap gap-2"><span class="rounded-full border border-white/20 px-3 py-2 text-xs">Marketing &amp; Dados</span><span class="rounded-full border border-white/20 px-3 py-2 text-xs">Web &amp; Sistemas</span><span class="rounded-full border border-white/20 px-3 py-2 text-xs">Integrações &amp; IA</span></div>
+              <div class="portrait-frame relative overflow-hidden rounded-[26px] bg-gradient-to-br from-slate-200 via-slate-100 to-blue-100 sm:rounded-[28px]">
+                  <img src="assets/retrato-profissional.svg" alt="Retrato profissional de Wanessa Karen com blazer escuro e cabelo vermelho escuro" class="portrait-image" width="256" height="256" decoding="async" fetchpriority="high"/>
+                  <div class="portrait-caption absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
+                    <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-sky-200">WANESSA KAREN</p>
+                    <h3 class="mt-2 text-xl font-extrabold leading-tight sm:text-2xl">Estratégia. Tecnologia.<br/>Transformação digital.</h3>
+                  </div>
                 </div>
             </div>
 
