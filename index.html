@@ -389,6 +389,55 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
 @media(max-width:640px){.lab-console-body{grid-template-columns:1fr}.lab-console-body>div{padding:12px 15px}}
 @media(prefers-reduced-motion:reduce){body.creative-digital-lab #atuacao article:hover,body.creative-digital-lab #projetos article:hover{transform:none!important}}
 
+
+    /* Responsive layout refinements — Creative Digital Lab */
+    body.creative-digital-lab > header .site-container {gap: clamp(12px,1.5vw,24px); min-width:0}
+    body.creative-digital-lab > header .site-container > a:first-child {flex-shrink:0;max-width:210px}
+    body.creative-digital-lab .brand-subtitle {white-space:nowrap;overflow:visible;letter-spacing:.12em}
+    body.creative-digital-lab > header nav {white-space:nowrap;min-width:0}
+    body.creative-digital-lab > header .nav-link {font-size:.81rem;white-space:nowrap}
+    body.creative-digital-lab .hero-grid .site-container {gap:clamp(26px,4vw,64px)}
+    body.creative-digital-lab .hero-grid .fluid-title {font-size:clamp(2.35rem,4.2vw,4.6rem);line-height:1.055;letter-spacing:-.055em;overflow-wrap:normal;hyphens:none}
+    body.creative-digital-lab .hero-photo-wrap {max-width:480px;margin-inline:auto;background:linear-gradient(160deg,rgba(36,30,83,.88),rgba(12,29,56,.85))!important}
+    body.creative-digital-lab .portrait-frame {max-width:300px;min-height:auto;margin-inline:auto;aspect-ratio:1/1;border-radius:24px!important}
+    body.creative-digital-lab .portrait-image {width:100%;height:auto;aspect-ratio:1/1;max-width:300px;object-fit:cover;object-position:50% 34%;image-rendering:auto}
+    body.creative-digital-lab .portrait-caption {padding:14px 16px!important}
+    body.creative-digital-lab .portrait-caption h3 {font-size:1rem!important;line-height:1.3!important}
+    body.creative-digital-lab .portrait-caption p {font-size:.58rem}
+    body.creative-digital-lab .hero-photo-wrap > .mt-4 {gap:12px}
+    body.creative-digital-lab .hero-photo-wrap > .mt-4 > div {padding:14px!important;min-width:0}
+    body.creative-digital-lab .hero-photo-wrap > .mt-4 p {overflow-wrap:anywhere}
+    @media (max-width:1535px){
+      body.creative-digital-lab header .site-container {min-height:72px}
+      body.creative-digital-lab .mobile-menu.open {max-height:calc(100dvh - 72px);overflow-y:auto}
+    }
+    @media (min-width:1024px) and (max-width:1399px){
+      body.creative-digital-lab .hero-grid .site-container {grid-template-columns:minmax(0,1.13fr) minmax(0,.87fr)}
+      body.creative-digital-lab .hero-grid .fluid-title{font-size:clamp(2.5rem,4.4vw,4.1rem)}
+    }
+    @media (max-width:1023px){
+      body.creative-digital-lab .hero-grid .site-container {grid-template-columns:minmax(0,1fr);max-width:760px;padding-block:52px}
+      body.creative-digital-lab .hero-grid .fluid-title {font-size:clamp(2.3rem,6.5vw,4.4rem)}
+      body.creative-digital-lab .hero-photo-wrap {max-width:490px}
+      body.creative-digital-lab .hero-grid .site-container > .reveal {min-width:0}
+    }
+    @media (max-width:639px){
+      body.creative-digital-lab .hero-grid .site-container {padding-block:32px 56px;gap:30px}
+      body.creative-digital-lab .hero-grid .fluid-title {font-size:clamp(2.18rem,9.3vw,3.1rem);line-height:1.08}
+      body.creative-digital-lab .hero-grid .portrait-frame {max-width:245px}
+      body.creative-digital-lab .hero-grid .portrait-image {max-width:245px}
+      body.creative-digital-lab .hero-photo-wrap {max-width:360px}
+      body.creative-digital-lab .hero-photo-wrap > .mt-4 {grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+      body.creative-digital-lab .hero-photo-wrap > .mt-4 > div {padding:11px!important}
+      body.creative-digital-lab .hero-photo-wrap > .mt-4 p {font-size:.72rem}
+      body.creative-digital-lab .hero-grid .lab-console-body {grid-template-columns:1fr}
+      body.creative-digital-lab .hero-grid .lab-console-body > div {min-width:0}
+      body.creative-digital-lab .hero-grid .hero-badge {letter-spacing:.08em;font-size:.65rem}
+    }
+    @media (max-width:359px){
+      body.creative-digital-lab .hero-grid .fluid-title {font-size:2rem}
+      body.creative-digital-lab .brand-subtitle {display:none}
+    }
   </style>
 </head>
 
@@ -396,15 +445,15 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
   <a href="#inicio" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-xl focus:bg-white focus:px-4 focus:py-3 focus:text-brand-dark">Pular para o conteúdo</a>
   <header class="sticky top-0 z-50 border-b border-brand-line/70 bg-white/85 backdrop-blur-xl">
     <div class="site-container flex min-h-[72px] items-center justify-between gap-3 py-3 lg:min-h-[80px]">
-      <a href="#inicio" class="flex min-w-0 items-center gap-3" aria-label="Ir para o início do portfólio">
+      <a href="#inicio" class="flex shrink-0 items-center gap-3" aria-label="Ir para o início do portfólio">
         <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-brand-dark text-lg font-extrabold text-white shadow-soft">WK</span>
         <div class="min-w-0">
-          <p class="brand-subtitle truncate text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-primary sm:text-xs">Portfólio Profissional</p>
-          <h1 class="truncate text-sm font-extrabold tracking-tight text-brand-dark sm:text-lg">Wanessa Karen</h1>
+          <p class="brand-subtitle text-[10px] font-semibold uppercase tracking-[0.16em] text-brand-primary">Portfólio Profissional</p>
+          <h1 class="whitespace-nowrap text-sm font-extrabold tracking-tight text-brand-dark sm:text-lg">Wanessa Karen</h1>
         </div>
       </a>
 
-      <nav class="hidden items-center gap-4 2xl:gap-7 xl:flex" aria-label="Navegação principal">
+      <nav class="hidden items-center gap-4 2xl:gap-5 2xl:flex" aria-label="Navegação principal">
         <a href="#sobre" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Sobre</a>
         <a href="#atuacao" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Dia a dia</a>
         <a href="#experiencia" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Experiência</a>
@@ -420,14 +469,14 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
           href="https://wa.me/5562993079183"
           target="_blank"
           rel="noopener noreferrer"
-          class="hidden rounded-full bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-primaryDark md:inline-flex"
+          class="hidden rounded-full bg-brand-primary px-5 py-3 text-sm font-semibold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-primaryDark xl:inline-flex"
         >
           <i class="fa-brands fa-whatsapp mr-2" aria-hidden="true"></i>Falar no WhatsApp
         </a>
 
         <button
           id="menu-toggle"
-          class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brand-line bg-white text-brand-dark transition hover:border-brand-primary hover:text-brand-primary xl:hidden"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brand-line bg-white text-brand-dark transition hover:border-brand-primary hover:text-brand-primary 2xl:hidden"
           type="button"
           aria-label="Abrir menu"
           aria-controls="mobile-menu"
@@ -438,7 +487,7 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
       </div>
     </div>
 
-    <div id="mobile-menu" class="mobile-menu border-t border-brand-line bg-white xl:hidden">
+    <div id="mobile-menu" class="mobile-menu border-t border-brand-line bg-white 2xl:hidden">
       <nav class="site-container flex flex-col py-4" aria-label="Navegação mobile">
         <a href="#sobre" class="mobile-link rounded-xl px-3 py-3 text-sm font-medium text-brand-soft transition hover:bg-slate-50 hover:text-brand-primary">Sobre</a>
         <a href="#atuacao" class="mobile-link rounded-xl px-3 py-3 text-sm font-medium text-brand-soft transition hover:bg-slate-50 hover:text-brand-primary">Dia a dia</a>
@@ -465,7 +514,7 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
       <div class="pointer-events-none absolute inset-0 bg-grid bg-[length:28px_28px] opacity-60"></div>
 
       <div class="site-container relative z-10 grid items-center gap-10 py-12 sm:py-16 md:py-20 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)] lg:gap-14 lg:py-28">
-        <div class="reveal order-2 lg:order-1 lg:pr-4">
+        <div class="reveal order-1 lg:order-1 lg:pr-4">
           <div class="mb-6"><span class="lab-status">Creative Digital Lab / 2026</span></div>
           <span class="hero-badge mb-6 inline-flex max-w-full rounded-full border border-brand-primary/15 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary shadow-soft sm:text-sm">
             +7 anos em Marketing Digital
@@ -504,11 +553,11 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
           </div>
         </div>
 
-        <div class="reveal order-1 lg:order-2">
+        <div class="reveal order-2 lg:order-2">
           <div class="hero-photo-wrap glass overflow-hidden rounded-[32px] border border-white/70 p-3 shadow-glow sm:p-4 lg:p-5">
             <div class="overflow-hidden rounded-[26px] bg-white shadow-soft sm:rounded-[28px]">
               <div class="portrait-frame relative overflow-hidden rounded-[26px] bg-gradient-to-br from-slate-200 via-slate-100 to-blue-100 sm:rounded-[28px]">
-                  <img src="assets/retrato-profissional.svg" alt="Retrato profissional de Wanessa Karen com blazer escuro e cabelo vermelho escuro" class="portrait-image" width="256" height="256" decoding="async" fetchpriority="high"/>
+                  <img src="assets/retrato-profissional.svg" alt="Retrato profissional de Wanessa Karen com blazer escuro e cabelo vermelho escuro" class="portrait-image" width="700" height="700" decoding="async" fetchpriority="high"/>
                   <div class="portrait-caption absolute inset-x-0 bottom-0 p-6 text-white sm:p-8">
                     <p class="text-[11px] font-bold uppercase tracking-[0.22em] text-sky-200">WANESSA KAREN</p>
                     <h3 class="mt-2 text-xl font-extrabold leading-tight sm:text-2xl">Estratégia. Tecnologia.<br/>Transformação digital.</h3>
@@ -945,7 +994,7 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
       });
 
       window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1280) closeMobileMenu();
+        if (window.innerWidth >= 1536) closeMobileMenu();
       });
 
       document.addEventListener('keydown', (event) => {
