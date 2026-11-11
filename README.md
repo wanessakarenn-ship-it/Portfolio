@@ -1,27 +1,31 @@
-Currículo Interativo - Wanessa Karen Pacheco
-Este é um projeto de currículo interativo e de página única (SPA - Single Page Application) criado para apresentar as qualificações de Wanessa Karen Pacheco de uma forma moderna e envolvente. O objetivo é fornecer uma experiência de visualização intuitiva, permitindo que recrutadores e interessados explorem o perfil profissional de maneira dinâmica.
+# Wanessa Karen | Portfólio Profissional
 
-Funcionalidades
-Página Única (SPA): Todo o conteúdo do currículo está em um único arquivo HTML, otimizado para fácil compartilhamento e visualização.
+Portfólio de Wanessa Karen, reunindo experiência em **marketing digital, performance, dados e desenvolvimento back-end**.
 
-Design Responsivo: O layout se adapta perfeitamente a diferentes dispositivos, como desktops, tablets e smartphones.
+## Acesse o portfólio
 
-Gráfico Interativo: A seção de especialidades é apresentada em um gráfico de barras dinâmico, que permite a visualização rápida das competências e ferramentas.
+**[Ver portfólio profissional](https://portfolio-wanessa-sigma.vercel.app/)**
 
-Linha do Tempo: A experiência profissional é exibida em um formato de linha do tempo vertical, facilitando a compreensão da progressão de carreira.
+## Sobre o projeto
 
-Navegação Fixa: Um menu de navegação no topo da página permanece visível e permite o acesso rápido a cada seção do currículo.
+Página responsiva que apresenta trajetória profissional, competências, formação e formas de contato, com navegação por seções e elementos interativos.
 
-Tecnologias Utilizadas
-HTML5: Para estruturar o conteúdo da página.
+## Tecnologias
 
-Tailwind CSS: Um framework de CSS utilitário para estilização e criação de um layout responsivo.
+- HTML5, CSS e JavaScript
+- Tailwind CSS
+- Font Awesome
 
-JavaScript: Para implementar a lógica de interação, como o menu responsivo e o gráfico dinâmico.
+## Contato
 
-Chart.js: Uma biblioteca JavaScript para a criação do gráfico de habilidades.
+- [WhatsApp](https://wa.me/5562993079183)
+- [LinkedIn](https://www.linkedin.com/in/wanessa-karen-b70264272)
+- [GitHub](https://github.com/wanessakarenn-ship-it)
 
-Como Visualizar
-Para ver o currículo interativo, basta abrir o arquivo index.html em qualquer navegador web. Não é necessário nenhum servidor ou configuração adicional.
+## Execução local
 
-https://voluble-smakager-6fc649.netlify.app/
+Abra o arquivo `index.html` em um navegador. A página utiliza bibliotecas carregadas por CDN.
+
+---
+
+Este repositório contém o código do portfólio. O site oficial está disponível em https://portfolio-wanessa-sigma.vercel.app/.
