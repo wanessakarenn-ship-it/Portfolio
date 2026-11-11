@@ -330,6 +330,12 @@
     @media (prefers-reduced-motion: reduce) {
       #projetos article, #competencias article, #sobre article { transition: none; }
     }
+
+    @media (max-width: 1279px) {
+      .mobile-menu.open { max-height: calc(100dvh - var(--header-height)); overflow-y: auto; }
+    }
+    #atuacao article { height: 100%; }
+    #atuacao h3 { text-wrap: balance; }
   </style>
 </head>
 
@@ -345,8 +351,9 @@
         </div>
       </a>
 
-      <nav class="hidden items-center gap-6 xl:gap-8 lg:flex" aria-label="Navegação principal">
+      <nav class="hidden items-center gap-4 2xl:gap-7 xl:flex" aria-label="Navegação principal">
         <a href="#sobre" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Sobre</a>
+        <a href="#atuacao" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Dia a dia</a>
         <a href="#experiencia" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Experiência</a>
         <a href="#competencias" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Competências</a>
         <a href="#projetos" class="nav-link text-sm font-medium text-brand-soft transition hover:text-brand-primary">Projetos</a>
@@ -367,7 +374,7 @@
 
         <button
           id="menu-toggle"
-          class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brand-line bg-white text-brand-dark transition hover:border-brand-primary hover:text-brand-primary lg:hidden"
+          class="inline-flex h-11 w-11 items-center justify-center rounded-xl border border-brand-line bg-white text-brand-dark transition hover:border-brand-primary hover:text-brand-primary xl:hidden"
           type="button"
           aria-label="Abrir menu"
           aria-controls="mobile-menu"
@@ -378,9 +385,10 @@
       </div>
     </div>
 
-    <div id="mobile-menu" class="mobile-menu border-t border-brand-line bg-white lg:hidden">
+    <div id="mobile-menu" class="mobile-menu border-t border-brand-line bg-white xl:hidden">
       <nav class="site-container flex flex-col py-4" aria-label="Navegação mobile">
         <a href="#sobre" class="mobile-link rounded-xl px-3 py-3 text-sm font-medium text-brand-soft transition hover:bg-slate-50 hover:text-brand-primary">Sobre</a>
+        <a href="#atuacao" class="mobile-link rounded-xl px-3 py-3 text-sm font-medium text-brand-soft transition hover:bg-slate-50 hover:text-brand-primary">Dia a dia</a>
         <a href="#experiencia" class="mobile-link rounded-xl px-3 py-3 text-sm font-medium text-brand-soft transition hover:bg-slate-50 hover:text-brand-primary">Experiência</a>
         <a href="#competencias" class="mobile-link rounded-xl px-3 py-3 text-sm font-medium text-brand-soft transition hover:bg-slate-50 hover:text-brand-primary">Competências</a>
         <a href="#projetos" class="mobile-link rounded-xl px-3 py-3 text-sm font-medium text-brand-soft transition hover:bg-slate-50 hover:text-brand-primary">Projetos</a>
@@ -522,6 +530,65 @@
             <h3 class="text-lg font-bold text-brand-dark">Dados &amp; Automação</h3>
             <p class="mt-3 text-sm leading-7 text-brand-soft">Rastreamento, integração de plataformas e análise de dados para apoiar decisões.</p>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="atuacao" class="border-t border-brand-line bg-white">
+      <div class="site-container py-16 lg:py-24">
+        <div class="reveal grid gap-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-end lg:gap-12">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-primary">O que desenvolvo no dia a dia</p>
+            <h2 class="section-title fluid-section-title mt-4 font-black text-brand-dark">Estratégia, código e operação conectados.</h2>
+          </div>
+          <p class="text-base leading-8 text-brand-soft">Minha rotina combina a evolução de experiências digitais, o acompanhamento de campanhas e dados e a construção de fluxos que conectam ferramentas e equipes. Atuo do planejamento à validação técnica, com atenção ao impacto de cada entrega para o negócio.</p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Desenvolvimento web &amp; UX</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Planejo, ajusto e evoluo páginas institucionais, landing pages, simuladores e interfaces responsivas, trabalhando estrutura de conteúdo, navegação, componentes e experiência do usuário.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">Front-end · Layouts · Git/GitHub</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-secondary/10 text-brand-secondary"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Automações &amp; integrações</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Desenho e testo fluxos com webhooks, APIs e validação de dados, conectando formulários e jornadas digitais ao n8n e ao Salesforce para apoiar o processo comercial.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">n8n · Salesforce · Webhooks · APIs</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Campanhas &amp; performance</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Estruturo campanhas, analiso a qualidade dos leads e acompanho oportunidades de otimização dos canais pagos, conectando a comunicação aos objetivos comerciais.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">Google Ads · Meta Ads · LinkedIn Ads</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Dados &amp; mensuração</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Reviso UTMs, eventos de conversão, parâmetros de campanhas e integrações de rastreamento para melhorar a consistência dos dados entre mídia, site e CRM.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">GA4 · GTM · UTMs · Conversões</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-secondary/10 text-brand-secondary"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Produtos &amp; ferramentas internas</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Trabalho na evolução do Studio Visual e de componentes reutilizáveis, com foco em personalização, consistência de interfaces e processos de publicação controlados.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">Studio Visual · Componentes · QA</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">IA aplicada ao trabalho</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Utilizo ferramentas de inteligência artificial como apoio à prototipação, análise de problemas, implementação, testes, revisão de conteúdo e documentação técnica.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">IA assistiva · Prototipação · Documentação</p>
+          </article>
+        </div>
+        <div class="reveal mt-7 rounded-[24px] border border-brand-primary/15 bg-gradient-to-r from-blue-50 to-violet-50 p-6 sm:p-8">
+          <p class="text-xs font-bold uppercase tracking-[0.20em] text-brand-primary">Como conduzo as entregas</p>
+          <div class="mt-4 grid gap-4 text-sm font-semibold text-brand-dark sm:grid-cols-2 lg:grid-cols-4">
+            <div><span class="mr-2 text-brand-primary">01</span>Entender o problema</div>
+            <div><span class="mr-2 text-brand-primary">02</span>Desenhar a solução</div>
+            <div><span class="mr-2 text-brand-primary">03</span>Implementar e testar</div>
+            <div><span class="mr-2 text-brand-primary">04</span>Medir e evoluir</div>
+          </div>
         </div>
       </div>
     </section>
@@ -821,7 +888,7 @@
       });
 
       window.addEventListener('resize', () => {
-        if (window.innerWidth >= 1024) closeMobileMenu();
+        if (window.innerWidth >= 1280) closeMobileMenu();
       });
 
       document.addEventListener('keydown', (event) => {
