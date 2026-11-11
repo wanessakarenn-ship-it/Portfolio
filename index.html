@@ -613,7 +613,146 @@ body.creative-digital-lab #projetos article,body.creative-digital-lab #certifica
  body.creative-digital-lab main>section:not(.hero-grid) article:hover{transform:none!important}
 }
 
-  </style>
+  
+/* Creative Digital Lab — faithful hero reconstruction based on approved visual */
+body.creative-digital-lab {font-family:Inter,system-ui,sans-serif!important;background:#050a24!important}
+body.creative-digital-lab>header{
+ background:rgba(3,7,30,.89)!important;
+ border-bottom:1px solid rgba(120,110,233,.29)!important;
+ backdrop-filter:blur(20px)!important;
+}
+body.creative-digital-lab>header .site-container{width:min(calc(100% - 100px),1440px);max-width:1440px;min-height:106px;gap:28px}
+body.creative-digital-lab>header .site-container>a:first-child{max-width:280px;gap:20px}
+body.creative-digital-lab>header .site-container>a:first-child>span{width:62px;height:62px;border-radius:999px;font-size:27px;background:linear-gradient(130deg,#a012fe,#5600dd)!important}
+body.creative-digital-lab>header .brand-subtitle{font-size:13px;letter-spacing:.25em!important;color:#b8a8ff!important}
+body.creative-digital-lab>header h1{font-size:22px!important;color:white!important;white-space:nowrap}
+body.creative-digital-lab>header .nav-link{font-size:15px!important;color:#f2f2ff!important;line-height:1.25;white-space:normal}
+body.creative-digital-lab>header .nav-link:hover{color:#64ebff!important}
+body.creative-digital-lab>header .nav-link[href="#atuacao"]{max-width:38px;text-align:center}
+body.creative-digital-lab>header .site-container>div>a{background:linear-gradient(110deg,#8c2af8,#ef3bc1)!important;font-size:16px!important;padding:17px 28px!important;white-space:nowrap;box-shadow:0 12px 40px rgba(176,56,250,.25)!important}
+body.creative-digital-lab>header .site-container nav{gap:clamp(12px,1.25vw,24px)!important}
+body.creative-digital-lab .cdl-hero{position:relative;min-height:920px;background:#050b28!important;overflow:hidden;isolation:isolate;border-bottom:1px solid rgba(144,92,242,.28)!important}
+body.creative-digital-lab .cdl-hero::before{
+ content:"";position:absolute;inset:0;pointer-events:none;z-index:-2;
+ background:radial-gradient(ellipse at 52% 10%,rgba(103,4,202,.37),transparent 39%),radial-gradient(ellipse at 98% 40%,rgba(0,139,255,.38),transparent 43%),radial-gradient(ellipse at 0% 94%,rgba(119,28,239,.27),transparent 39%),linear-gradient(120deg,#030922,#080a2b 50%,#080f3c);
+}
+body.creative-digital-lab .cdl-hero .cdl-aurora{position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:1}
+body.creative-digital-lab .cdl-hero .cdl-aurora svg{width:100%;height:100%;display:block}
+body.creative-digital-lab .cdl-hero-content{
+ width:min(calc(100% - 112px),1440px);max-width:1440px;display:grid;
+ grid-template-columns:minmax(0,1.44fr) minmax(0,1fr);
+ gap:clamp(28px,3vw,56px);align-items:start;
+ padding-top:42px;padding-bottom:62px;position:relative;z-index:1;
+}
+body.creative-digital-lab .cdl-intro{min-width:0}
+body.creative-digital-lab .cdl-live-label{display:flex;gap:16px;align-items:center;font-size:14px;letter-spacing:.19em;font-weight:800;color:#3aeafa;line-height:1.5;margin:0 0 32px}
+.cdl-live-dot{width:11px;height:11px;flex-shrink:0;border-radius:50%;background:#13e6f9;box-shadow:0 0 20px rgba(7,228,248,.85)}
+body.creative-digital-lab .cdl-experience-pill{
+ display:inline-flex;align-items:center;gap:16px;color:#d0b2ff;
+ padding:12px 22px;border:1px solid #923afa;border-radius:100px;
+ background:rgba(10,10,48,.8);font-size:15px;font-weight:700;letter-spacing:.16em;
+ line-height:1.4;margin:0 0 26px;box-shadow:inset 0 1px rgba(173,80,255,.15);
+}
+.cdl-experience-pill i{font-size:20px;color:#db30e9}
+body.creative-digital-lab .cdl-hero-title{
+ margin:0;max-width:850px;line-height:1.065;letter-spacing:-.055em;
+ font-size:clamp(45px,4.9vw,76px);font-weight:900;
+ background:linear-gradient(110deg,#fff 19%,#f7f6ff 40%,#d5b2ff 71%,#72bdff 93%);
+ -webkit-background-clip:text;background-clip:text;color:transparent!important;
+ text-wrap:balance;
+}
+body.creative-digital-lab .cdl-hero-title span{
+ background:linear-gradient(100deg,#bf79ff,#27eaff);-webkit-background-clip:text;background-clip:text;color:transparent;
+}
+body.creative-digital-lab .cdl-hero-description{
+ max-width:660px;margin:28px 0 0;font-size:clamp(17px,1.55vw,24px);
+ color:#c7cbe8!important;line-height:1.42;font-weight:400;
+}
+body.creative-digital-lab .cdl-hero-actions{display:flex;flex-wrap:wrap;gap:22px;margin-top:28px}
+body.creative-digital-lab .cdl-hero-actions a{display:inline-flex;align-items:center;justify-content:center;gap:17px;min-height:70px;border-radius:999px;padding:14px 28px;font-size:19px;white-space:nowrap;font-weight:600;transition:transform .2s,box-shadow .2s}
+body.creative-digital-lab .cdl-hero-actions a:hover{transform:translateY(-3px)}
+body.creative-digital-lab .cdl-action-primary{color:white;background:linear-gradient(106deg,#0067ff,#7731ff 48%,#ee36bc);border:1px solid #358aff;box-shadow:0 13px 36px rgba(44,66,255,.24)}
+body.creative-digital-lab .cdl-action-primary:hover{box-shadow:0 16px 43px rgba(154,59,252,.4)}
+body.creative-digital-lab .cdl-action-secondary{color:#f9f8ff;background:rgba(4,9,33,.68);border:1px solid #a5a0e9}
+body.creative-digital-lab .cdl-action-secondary i{color:#a69afc;font-size:22px}
+body.creative-digital-lab .cdl-studio-panel{
+ margin-top:36px;max-width:830px;background:rgba(6,11,37,.83);border-radius:24px;
+ border:1px solid rgba(121,91,240,.62);box-shadow:0 12px 36px rgba(45,27,150,.19),inset 0 1px rgba(255,255,255,.05);
+ overflow:hidden;
+}
+.cdl-studio-header{display:flex;justify-content:space-between;align-items:center;gap:14px;min-height:52px;padding:10px 18px;font-size:12px;letter-spacing:.19em;font-weight:750;color:#c3b7ff;border-bottom:1px solid rgba(113,99,203,.31)}
+.cdl-dots{display:flex;gap:9px}.cdl-dots i{display:block;width:14px;height:14px;border-radius:50%;background:#ff3e60}.cdl-dots i:nth-child(2){background:#ffc400}.cdl-dots i:nth-child(3){background:#12e323}
+.cdl-online{display:flex;align-items:center;gap:9px;color:#f9faff;white-space:nowrap}.cdl-online i{width:9px;height:9px;border-radius:50%;background:#12e323;box-shadow:0 0 10px #12e323}
+.cdl-studio-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;padding:13px 16px 16px}
+.cdl-studio-tiles>div{min-height:115px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:9px;background:linear-gradient(140deg,#10194e,#0a1030);border:1px solid rgba(95,92,223,.54);border-radius:19px;color:#f8f8ff;font-size:17px;line-height:1.35}
+.cdl-studio-tiles>div:nth-child(3){border-color:rgba(152,65,246,.55)}
+.cdl-studio-tiles>div i{font-size:30px;color:#159bff}
+.cdl-feature{min-width:0}
+body.creative-digital-lab .cdl-portrait-card{position:relative;width:100%;aspect-ratio:0.92;border-radius:36px;overflow:hidden;border:2px solid #3b81ff;background:#0e1235;box-shadow:0 0 0 1px rgba(186,59,244,.42),0 23px 67px rgba(36,26,176,.34),0 0 34px rgba(23,158,250,.14)}
+body.creative-digital-lab .cdl-portrait-card:before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;border-radius:inherit;box-shadow:inset 1px 1px 8px rgba(220,73,252,.65)}
+body.creative-digital-lab .cdl-portrait-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 27%;filter:saturate(1.18) contrast(1.09)}
+body.creative-digital-lab .cdl-portrait-card:after{content:"";position:absolute;inset:34% 0 0;z-index:1;pointer-events:none;background:linear-gradient(180deg,transparent 0%,rgba(1,4,22,.12) 25%,rgba(2,5,18,.93) 100%)}
+.cdl-portrait-caption{position:absolute;z-index:3;left:30px;right:24px;bottom:30px;display:flex;flex-direction:column;align-items:start}
+.cdl-portrait-caption span{font-size:14px;font-weight:800;color:#bcb3ff;letter-spacing:.34em}
+.cdl-portrait-caption strong{font-size:clamp(23px,2.2vw,37px);font-weight:850;color:white;line-height:1.12;letter-spacing:-.035em;margin-top:13px}
+.cdl-portrait-caption>i{display:block;width:95px;height:5px;background:linear-gradient(90deg,#e343e8,#2947d1);border-radius:12px;margin-top:18px}
+.cdl-feature-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
+.cdl-feature-card{display:flex;align-items:center;gap:20px;padding:24px 22px;min-height:125px;border-radius:25px;border:1px solid #6937dc;background:linear-gradient(140deg,rgba(29,13,88,.94),rgba(15,14,55,.95));color:white}
+.cdl-feature-card:nth-child(2){border-color:#0675bf;background:linear-gradient(140deg,#102052,#061a46)}
+.cdl-feature-card>i{font-size:32px;color:#d039f6}.cdl-feature-card:nth-child(2)>i{color:#1cddff}
+.cdl-feature-card span{display:block;color:#aa98ff;font-size:14px;font-weight:800;letter-spacing:.15em;margin-bottom:10px}
+.cdl-feature-card:nth-child(2) span{color:#26baff}
+.cdl-feature-card strong{font-size:17px;font-weight:500;line-height:1.3;white-space:normal}
+@media(min-width:1400px){
+ body.creative-digital-lab>header nav{display:flex!important}
+ body.creative-digital-lab>header #menu-toggle{display:none!important}
+ body.creative-digital-lab>header .site-container>div>a{display:inline-flex!important}
+}
+@media(min-width:1024px) and (max-width:1399px){
+ body.creative-digital-lab .cdl-hero-content{width:min(calc(100% - 64px),1320px);grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:30px}
+ body.creative-digital-lab .cdl-hero-title{font-size:clamp(40px,4.7vw,60px)}
+ body.creative-digital-lab .cdl-hero-actions a{font-size:16px;min-height:60px;padding:12px 21px}
+ .cdl-feature-card{gap:12px;padding:15px 13px}.cdl-feature-card strong{font-size:15px}
+}
+@media(max-width:1023px){
+ body.creative-digital-lab .cdl-hero-content{width:min(calc(100% - 60px),720px);display:flex;flex-direction:column;gap:42px;padding-top:42px}
+ body.creative-digital-lab .cdl-hero-title{font-size:clamp(43px,7vw,67px)}
+ body.creative-digital-lab .cdl-feature{width:min(100%,560px);margin-inline:auto}
+ body.creative-digital-lab .cdl-hero-actions a{min-height:60px;font-size:17px}
+ body.creative-digital-lab .cdl-portrait-card{aspect-ratio:1/1}
+ body.creative-digital-lab>header .site-container{width:min(calc(100% - 48px),1120px)}
+}
+@media(max-width:640px){
+ body.creative-digital-lab>header .site-container{width:calc(100% - 32px);min-height:76px;gap:12px}
+ body.creative-digital-lab>header .site-container>a:first-child>span{width:43px;height:43px;font-size:19px}
+ body.creative-digital-lab>header .site-container>a:first-child{gap:10px}
+ body.creative-digital-lab>header h1{font-size:16px!important}
+ body.creative-digital-lab>header .brand-subtitle{font-size:9px!important;letter-spacing:.13em!important}
+ body.creative-digital-lab>header .site-container>div>a{display:none!important}
+ body.creative-digital-lab .cdl-hero-content{width:calc(100% - 36px);gap:30px;padding-top:34px;padding-bottom:48px}
+ body.creative-digital-lab .cdl-live-label{font-size:10px;letter-spacing:.13em;margin-bottom:22px}
+ body.creative-digital-lab .cdl-experience-pill{font-size:10px;padding:9px 14px;gap:9px;letter-spacing:.08em;margin-bottom:20px}
+ body.creative-digital-lab .cdl-experience-pill i{font-size:14px}
+ body.creative-digital-lab .cdl-hero-title{font-size:clamp(33px,9.1vw,53px);line-height:1.09;letter-spacing:-.045em}
+ body.creative-digital-lab .cdl-hero-description{font-size:16px;line-height:1.6;margin-top:22px}
+ body.creative-digital-lab .cdl-hero-actions{gap:12px;margin-top:25px}
+ body.creative-digital-lab .cdl-hero-actions a{width:100%;font-size:15px;min-height:56px}
+ body.creative-digital-lab .cdl-studio-panel{margin-top:29px}
+ .cdl-studio-header{font-size:9px;gap:7px;padding:8px 9px;letter-spacing:.06em}
+ .cdl-dots{gap:4px}.cdl-dots i{width:8px;height:8px}
+ .cdl-studio-tiles{gap:6px;padding:9px}.cdl-studio-tiles>div{font-size:11px;padding:11px 4px;min-height:88px;border-radius:12px}
+ .cdl-studio-tiles>div i{font-size:20px}
+ body.creative-digital-lab .cdl-portrait-card{border-radius:25px}
+ .cdl-portrait-caption{left:18px;bottom:18px;right:15px}
+ .cdl-portrait-caption span{font-size:10px;letter-spacing:.22em}
+ .cdl-portrait-caption strong{font-size:clamp(21px,5.6vw,29px);margin-top:7px}
+ .cdl-portrait-caption>i{margin-top:12px}
+ .cdl-feature-cards{gap:9px;margin-top:12px}.cdl-feature-card{border-radius:15px;gap:10px;padding:13px 10px;min-height:90px}
+ .cdl-feature-card>i{font-size:20px}.cdl-feature-card span{font-size:10px;margin-bottom:5px;letter-spacing:.08em}.cdl-feature-card strong{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){body.creative-digital-lab .cdl-hero-actions a:hover{transform:none}}
+
+</style>
 </head>
 
 <body class="antialiased selection:bg-brand-primary/20 selection:text-brand-dark creative-digital-lab">
@@ -685,67 +824,58 @@ body.creative-digital-lab #projetos article,body.creative-digital-lab #certifica
   </header>
 
   <main id="inicio">
-    <section class="hero-grid relative overflow-hidden border-b border-brand-line">
-      <div class="pointer-events-none absolute inset-0 bg-grid bg-[length:28px_28px] opacity-60"></div>
-
-      <div class="site-container relative z-10 grid items-center gap-10 py-12 sm:py-16 md:py-20 lg:grid-cols-[minmax(0,1.08fr)_minmax(360px,0.92fr)] lg:gap-14 lg:py-28">
-        <div class="reveal order-1 lg:order-1 lg:pr-4">
-          <div class="mb-6"><span class="lab-status">Creative Digital Lab / 2026</span></div>
-          <span class="hero-badge mb-6 inline-flex max-w-full rounded-full border border-brand-primary/15 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.22em] text-brand-primary shadow-soft sm:text-sm">
-            +7 anos em Marketing Digital
-          </span>
-
-          <h2 class="fluid-title max-w-4xl font-black text-brand-dark">
-            Tecnologia, marketing e soluções digitais orientadas a resultados.
-          </h2>
-
-          <p class="mt-7 max-w-2xl text-[15px] leading-8 text-brand-soft sm:text-lg">
-            Conecto marketing digital, desenvolvimento web, dados e automação para criar soluções que unem estratégia e execução técnica.
-          </p>
-
-          <div class="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#projetos"
-              class="mobile-full-button inline-flex items-center justify-center rounded-full bg-brand-dark px-7 py-4 text-sm font-bold text-white shadow-soft transition hover:-translate-y-0.5 hover:bg-brand-slate"
-            >
-              Explorar projetos
-            </a>
-            <a
-              href="#contato"
-              class="mobile-full-button inline-flex items-center justify-center rounded-full border border-brand-line bg-white px-7 py-4 text-sm font-bold text-brand-dark transition hover:border-brand-primary hover:text-brand-primary"
-            >
-              Entrar em contato
-            </a>
+    <section class="hero-grid cdl-hero" aria-labelledby="hero-title">
+      <div class="cdl-aurora" aria-hidden="true">
+        <svg viewBox="0 0 1536 1020" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="ribbon-violet" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#070b2e"/><stop offset=".3" stop-color="#3025c1"/><stop offset=".58" stop-color="#9e2ef6"/><stop offset=".78" stop-color="#4f0fb2"/><stop offset="1" stop-color="#0b1141"/></linearGradient>
+            <linearGradient id="ribbon-cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#210e70"/><stop offset=".35" stop-color="#1746cb"/><stop offset=".7" stop-color="#16b3f5"/><stop offset="1" stop-color="#5337db"/></linearGradient>
+            <linearGradient id="ribbon-bottom" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#bd24f5"/><stop offset=".46" stop-color="#5d13c6"/><stop offset="1" stop-color="#131358"/></linearGradient>
+            <filter id="ribbon-glow"><feGaussianBlur stdDeviation="12"/></filter>
+          </defs>
+          <path d="M635 398 C690 213 943 170 1207 -54 L1376 -106 C1100 189 889 348 657 551 Z" fill="url(#ribbon-violet)" opacity=".70"/>
+          <path d="M646 392 C790 198 980 150 1228 -48" stroke="#9b37ff" stroke-width="9" fill="none" opacity=".52" filter="url(#ribbon-glow)"/>
+          <path d="M661 550 C909 335 1076 227 1368 36" stroke="#216efc" stroke-width="2" fill="none" opacity=".35"/>
+          <path d="M1547 -10 C1462 129 1443 205 1304 317 C1373 518 1420 695 1558 814 Z" fill="url(#ribbon-cyan)" opacity=".62"/>
+          <path d="M1526 98 C1452 213 1380 274 1318 317" stroke="#29daff" stroke-width="12" fill="none" filter="url(#ribbon-glow)" opacity=".58"/>
+          <path d="M-100 839 C146 974 364 1015 490 1122 L-90 1127 Z" fill="url(#ribbon-bottom)" opacity=".9"/>
+          <path d="M-5 842 C201 973 383 1026 492 1125" stroke="#9a52fa" stroke-width="6" fill="none" opacity=".6" filter="url(#ribbon-glow)"/>
+          <path d="M994 1029 C1180 895 1378 888 1600 945" stroke="#6229e8" stroke-width="4" fill="none" opacity=".38"/>
+        </svg>
+      </div>
+      <div class="site-container cdl-hero-content">
+        <div class="cdl-intro reveal">
+          <p class="cdl-live-label"><span class="cdl-live-dot" aria-hidden="true"></span> CREATIVE DIGITAL LAB / 2026</p>
+          <p class="cdl-experience-pill"><i class="fa-solid fa-star" aria-hidden="true"></i> +7 ANOS EM MARKETING DIGITAL</p>
+          <h2 id="hero-title" class="cdl-hero-title">Tecnologia,<br>marketing e<br>soluções digitais<br>orientadas a <span>resultados.</span></h2>
+          <p class="cdl-hero-description">Conecto marketing digital, desenvolvimento web, dados e automação para criar soluções que unem estratégia e execução técnica.</p>
+          <div class="cdl-hero-actions">
+            <a href="#projetos" class="cdl-action-primary"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Explorar projetos <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            <a href="#contato" class="cdl-action-secondary"><i class="fa-regular fa-envelope" aria-hidden="true"></i> Entrar em contato</a>
           </div>
-
-          <div class="lab-console" aria-label="Painel de especialidades">
-            <div class="lab-console-bar"><span class="lab-console-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WANESSA / DIGITAL STUDIO</span><span>● LIVE</span></div>
-            <div class="lab-console-body">
-              <div><b>01 / BUILD</b><small>Front-end completo<br>e produtos digitais</small></div>
-              <div><b>02 / CONNECT</b><small>Automações, APIs<br>e integrações</small></div>
-              <div><b>03 / GROW</b><small>Marketing, dados<br>e performance</small></div>
+          <div class="cdl-studio-panel" aria-label="Especialidades do meu estúdio digital">
+            <div class="cdl-studio-header"><span class="cdl-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>WANESSA / DIGITAL STUDIO</span><span class="cdl-online"><i aria-hidden="true"></i> LIVE</span></div>
+            <div class="cdl-studio-tiles">
+              <div><i class="fa-solid fa-code" aria-hidden="true"></i><span>Desenvolvimento<br>Web</span></div>
+              <div><i class="fa-solid fa-arrow-trend-up" aria-hidden="true"></i><span>Marketing Digital</span></div>
+              <div><i class="fa-solid fa-gear" aria-hidden="true"></i><span>Automação &amp;<br>Integrações</span></div>
             </div>
           </div>
         </div>
-
-        <div class="reveal order-2 lg:order-2">
-          <div class="hero-photo-wrap portrait-showcase relative overflow-hidden rounded-[30px] border p-3 sm:p-4">
-            <div class="portrait-showcase-image overflow-hidden rounded-[23px]">
-              <img src="assets/retrato-profissional.webp" alt="Retrato profissional de Wanessa Karen" class="portrait-showcase-img" width="650" height="650" decoding="async" fetchpriority="high"/>
-            </div>
-            <div class="portrait-showcase-info flex flex-wrap items-center justify-between gap-3 px-2 pb-2 pt-5 sm:px-3">
-              <div>
-                <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-primary">WANESSA KAREN</p>
-                <p class="mt-1 text-sm font-semibold text-brand-dark">Tecnologia • Marketing • Automação</p>
-              </div>
-              <span class="rounded-full border border-cyan-300/25 bg-cyan-300/10 px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-cyan-200">Digital Lab</span>
-            </div>
+        <div class="cdl-feature reveal">
+          <div class="cdl-portrait-card">
+            <img src="assets/retrato-profissional.webp" alt="Wanessa Karen, profissional de tecnologia e marketing digital" width="650" height="650" fetchpriority="high" decoding="async">
+            <div class="cdl-portrait-caption"><span>WANESSA KAREN</span><strong>Estratégia. Tecnologia.<br>Transformação digital.</strong><i aria-hidden="true"></i></div>
+          </div>
+          <div class="cdl-feature-cards">
+            <div class="cdl-feature-card"><i class="fa-solid fa-briefcase" aria-hidden="true"></i><div><span>EXPERTISE</span><strong>Marketing &amp;<br>Tecnologia</strong></div></div>
+            <div class="cdl-feature-card"><i class="fa-solid fa-bolt" aria-hidden="true"></i><div><span>FOCO</span><strong>Alta Performance &amp;<br>Tech</strong></div></div>
           </div>
         </div>
       </div>
     </section>
 
-<section id="sobre" class="site-container py-16 lg:py-24">
+    <section id="sobre" class="site-container py-16 lg:py-24">
       <div class="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)] lg:gap-12">
         <div class="reveal rounded-[28px] border border-brand-line/70 bg-white p-5 shadow-card sm:p-8">
           <p class="lab-eyebrow">01 / Quem sou</p><h2 class="section-title fluid-section-title font-black text-brand-dark">Muito além do código.</h2>
