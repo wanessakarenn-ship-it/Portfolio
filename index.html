@@ -467,6 +467,152 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
       body.creative-digital-lab .portrait-showcase-info{padding:15px 4px 6px}
       body.creative-digital-lab .portrait-showcase-info p:last-of-type{font-size:.78rem}
     }
+
+/* CREATIVE DIGITAL LAB 2 — shared design language across the entire portfolio */
+:root{
+  --cdl-bg:#070b21;--cdl-panel:#111838;--cdl-panel2:#161b40;--cdl-stroke:rgba(131,127,250,.31);
+  --cdl-white:#f8f7ff;--cdl-muted:#b9c7e5;--cdl-purple:#a442ff;--cdl-pink:#f248cc;--cdl-blue:#126bff;--cdl-cyan:#31defb;
+}
+body.creative-digital-lab{background:#070b21!important;color:var(--cdl-white)!important}
+body.creative-digital-lab main{overflow:hidden;isolation:isolate}
+body.creative-digital-lab main>section{
+  position:relative;background:radial-gradient(ellipse at 0% 0%,rgba(73,23,156,.11),transparent 49%),#080c25!important;
+  border-color:rgba(125,117,237,.12)!important;
+}
+body.creative-digital-lab main>section:nth-of-type(2n){
+ background:radial-gradient(ellipse at 90% 10%,rgba(21,110,227,.13),transparent 48%),#0b1030!important;
+}
+body.creative-digital-lab main>section:not(.hero-grid):before{
+ content:"";position:absolute;inset:0;pointer-events:none;opacity:.15;
+ background-image:linear-gradient(rgba(75,105,226,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(75,105,226,.18) 1px,transparent 1px);
+ background-size:70px 70px;mask-image:linear-gradient(to bottom,black,transparent 72%);
+}
+body.creative-digital-lab main>section>.site-container{position:relative;z-index:1}
+body.creative-digital-lab .site-container{max-width:1240px}
+body.creative-digital-lab main>section:not(.hero-grid) .site-container{padding-top:clamp(68px,7.8vw,112px);padding-bottom:clamp(68px,7.8vw,112px)}
+body.creative-digital-lab .lab-eyebrow{font-size:11px;line-height:1.4;font-weight:850;letter-spacing:.22em;text-transform:uppercase;color:#5ee7fb;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+body.creative-digital-lab .lab-eyebrow:before{content:"";width:7px;height:7px;flex:0 0 auto;border-radius:50%;background:#4cefe0;box-shadow:0 0 0 5px rgba(76,239,224,.09),0 0 16px #30cffd}
+body.creative-digital-lab .fluid-section-title{font-size:clamp(2.1rem,4.5vw,3.45rem)!important;line-height:1.09;letter-spacing:-.055em!important;background:linear-gradient(115deg,#fff 18%,#d6b9ff 67%,#74d9ff);color:transparent!important;background-clip:text;-webkit-background-clip:text;text-wrap:balance}
+body.creative-digital-lab .section-title:after{width:76px;height:3px;margin-top:22px;background:linear-gradient(90deg,#b34cfe,#285eff,#2ee6fc);box-shadow:0 0 14px rgba(102,94,255,.4)}
+body.creative-digital-lab main>section .text-brand-soft{color:#b9c7e5!important}
+body.creative-digital-lab main>section .text-brand-primary{color:#c19bff!important}
+body.creative-digital-lab main>section .text-brand-secondary{color:#66e0fa!important}
+body.creative-digital-lab main>section h3{letter-spacing:-.025em;color:#f8f7ff!important}
+body.creative-digital-lab main>section p{overflow-wrap:break-word}
+body.creative-digital-lab main>section a:focus-visible{outline:3px solid #4fe5ff;outline-offset:4px}
+body.creative-digital-lab main>section:not(.hero-grid) article,
+body.creative-digital-lab #sobre .rounded-\[28px\]{
+ position:relative;overflow:hidden;
+ background:linear-gradient(147deg,rgba(28,24,72,.96),rgba(12,22,53,.96))!important;
+ border:1px solid rgba(119,117,238,.33)!important;border-radius:24px!important;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 16px 52px rgba(2,5,24,.25)!important;
+ transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease!important;
+}
+body.creative-digital-lab main>section:not(.hero-grid) article:after{
+ content:"";position:absolute;inset:0 0 auto 0;height:1px;pointer-events:none;
+ background:linear-gradient(90deg,transparent,rgba(159,104,255,.8),rgba(36,221,253,.65),transparent);opacity:.7
+}
+@media(hover:hover){
+ body.creative-digital-lab main>section:not(.hero-grid) article:hover{
+  transform:translateY(-5px)!important;border-color:rgba(100,215,255,.56)!important;
+  box-shadow:0 20px 65px rgba(56,36,153,.31)!important
+ }
+}
+body.creative-digital-lab #sobre .grid>div:first-child{border-radius:26px}
+body.creative-digital-lab #sobre article .fa-solid,
+body.creative-digital-lab #atuacao article .fa-solid,
+body.creative-digital-lab #competencias article .fa-solid{
+ font-size:1.25rem;background:linear-gradient(135deg,#ad66ff,#35d5fb);
+ background-clip:text;-webkit-background-clip:text;color:transparent!important
+}
+body.creative-digital-lab #sobre .grid>div:first-child>div,
+body.creative-digital-lab #sobre .grid>div:first-child{min-width:0}
+body.creative-digital-lab #atuacao article:nth-child(3n+2),
+body.creative-digital-lab #competencias article:nth-child(3n+2){border-color:rgba(45,173,251,.38)!important}
+body.creative-digital-lab #atuacao article:nth-child(3n),
+body.creative-digital-lab #competencias article:nth-child(3n){border-color:rgba(203,78,244,.37)!important}
+body.creative-digital-lab #atuacao .lab-workflow{
+ background:linear-gradient(120deg,rgba(38,23,99,.9),rgba(10,46,91,.9))!important;
+ border:1px solid rgba(91,118,249,.38)!important;
+ box-shadow:0 16px 44px rgba(0,0,0,.18);border-radius:22px;
+}
+body.creative-digital-lab #atuacao .lab-workflow>div:last-child>div{
+ background:rgba(9,16,49,.24);padding:13px;border:1px solid rgba(110,119,240,.16);border-radius:12px
+}
+body.creative-digital-lab #experiencia .space-y-6>article:first-child{
+ background:radial-gradient(circle at 100% 0%,rgba(42,113,214,.20),transparent 50%),linear-gradient(130deg,#27164e,#111d45)!important;
+ border-color:rgba(165,90,248,.5)!important
+}
+body.creative-digital-lab #experiencia .space-y-6>article:first-child:before{
+ content:"DIGITAL EXPERIENCE";display:block;color:#5de5f5;font-size:10px;letter-spacing:.22em;font-weight:800;margin-bottom:16px
+}
+body.creative-digital-lab #projetos article:first-child{
+ background:radial-gradient(ellipse at 100% 0%,rgba(59,47,190,.37),transparent 64%),linear-gradient(130deg,#231744,#0c1b40)!important;
+ border-color:rgba(165,108,255,.5)!important;
+}
+body.creative-digital-lab #projetos article:before{
+ content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+ background:linear-gradient(#ad5bff,#27d7ff);opacity:1
+}
+body.creative-digital-lab #projetos article:nth-child(2n):before{background:linear-gradient(#30d9ff,#aa69ff)}
+body.creative-digital-lab #projetos article .grid>div{
+ background:rgba(19,27,62,.76)!important;border-color:rgba(142,133,251,.32)!important
+}
+body.creative-digital-lab #projetos article>p:first-child,
+body.creative-digital-lab #certificacoes article>p:first-child{
+ color:#7ae8fd!important;letter-spacing:.15em
+}
+body.creative-digital-lab #formacao .timeline:before{
+ background:linear-gradient(180deg,#3de3ff,#a651ff,#e74bc1)!important;width:2px;box-shadow:0 0 13px rgba(112,75,255,.32)
+}
+body.creative-digital-lab #formacao .timeline-dot{
+ background:linear-gradient(130deg,#3bd7ff,#b44dff)!important;
+ border:4px solid #121832!important;box-shadow:0 0 0 2px #6454d2,0 0 17px rgba(87,121,252,.5)!important
+}
+body.creative-digital-lab #formacao .bg-emerald-50{background:rgba(34,179,129,.19)!important;color:#91f9cb!important}
+body.creative-digital-lab #formacao .bg-slate-700\/60{background:#232b49!important}
+body.creative-digital-lab #certificacoes article a{
+ display:inline-flex;align-items:center;gap:4px;margin-top:18px;
+ padding:9px 13px;border:1px solid rgba(111,120,249,.34);border-radius:999px;
+ color:#86defa!important;text-decoration:none;background:rgba(31,50,105,.30);
+}
+body.creative-digital-lab #certificacoes article a:hover{background:rgba(56,100,198,.34)!important}
+body.creative-digital-lab #contato .site-container,
+body.creative-digital-lab #contato>.reveal{padding-top:0!important;padding-bottom:0!important}
+body.creative-digital-lab #contato>.reveal{
+ position:relative;border:1px solid rgba(153,104,255,.55);
+ background:radial-gradient(circle at 100% 0%,rgba(241,59,183,.23),transparent 37%),radial-gradient(circle at 0% 100%,rgba(25,114,255,.30),transparent 50%),#171239!important;
+ border-radius:30px!important;box-shadow:0 28px 80px rgba(62,42,181,.28)!important;
+}
+body.creative-digital-lab #contato>.reveal h3{font-size:clamp(1.8rem,3vw,3rem);line-height:1.1;max-width:620px}
+body.creative-digital-lab #contato>.reveal>div>a{
+ background:linear-gradient(110deg,#225afc,#ee44bd)!important;color:white!important;
+ box-shadow:0 12px 38px rgba(99,60,217,.30)!important
+}
+body.creative-digital-lab footer{border-top:1px solid rgba(111,124,222,.27)!important;background:#07091e!important}
+body.creative-digital-lab footer a{border-color:rgba(116,119,224,.3)!important}
+body.creative-digital-lab #competencias .skills-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));}
+body.creative-digital-lab #projetos .grid,
+body.creative-digital-lab #certificacoes .grid{align-items:stretch}
+body.creative-digital-lab #projetos article,body.creative-digital-lab #certificacoes article{height:100%}
+@media(min-width:1024px){
+ body.creative-digital-lab #projetos .grid>article:first-child{grid-column:span 2}
+ body.creative-digital-lab #projetos .grid>article:first-child h3{font-size:clamp(1.4rem,2.5vw,2.15rem)}
+}
+@media(max-width:767px){
+ body.creative-digital-lab main>section:not(.hero-grid) .site-container{padding-block:60px}
+ body.creative-digital-lab main>section:not(.hero-grid) article{padding:22px!important}
+ body.creative-digital-lab #sobre .grid{gap:16px}
+ body.creative-digital-lab #projetos .grid>article:first-child{grid-column:auto}
+ body.creative-digital-lab .lab-eyebrow{font-size:10px;letter-spacing:.12em}
+ body.creative-digital-lab #formacao .timeline{padding-left:31px}
+ body.creative-digital-lab #formacao .timeline-dot{left:-31px}
+ body.creative-digital-lab #contato>.reveal{padding:26px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ body.creative-digital-lab main>section:not(.hero-grid) article:hover{transform:none!important}
+}
+
   </style>
 </head>
 
@@ -599,10 +745,120 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
       </div>
     </section>
 
-    <section id="experiencia" class="border-t border-brand-line bg-slate-50">
+<section id="sobre" class="site-container py-16 lg:py-24">
+      <div class="grid gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(300px,0.85fr)] lg:gap-12">
+        <div class="reveal rounded-[28px] border border-brand-line/70 bg-white p-5 shadow-card sm:p-8">
+          <p class="lab-eyebrow">01 / Quem sou</p><h2 class="section-title fluid-section-title font-black text-brand-dark">Muito além do código.</h2>
+          <div class="mt-8 space-y-6 text-[15px] leading-8 text-brand-soft sm:text-base">
+            <p>
+              Sou uma profissional movida pela sinergia entre tecnologia, dados e comportamento humano. Com mais de 7 anos de experiência em marketing digital, gestão de tráfego pago e inteligência de performance, desenvolvi ao longo da minha trajetória uma visão estratégica orientada a resultados, crescimento e tomada de decisão baseada em métricas.
+            </p>
+            <p>
+              Nos últimos anos, atuei diretamente na construção, otimização e escala de campanhas digitais, compreendendo profundamente a jornada do consumidor, aquisição de clientes e performance de canais. Essa vivência me proporcionou uma visão prática de negócio, mercado e geração de valor.
+            </p>
+            <p>
+              Movida pelo desejo de evoluir e ampliar minha capacidade de impacto, iniciei minha transição para a área de tecnologia, direcionando minha formação para desenvolvimento de software e análise de sistemas. Hoje, uno conhecimento técnico e visão estratégica para criar soluções que não apenas funcionam, mas resolvem problemas reais e sustentam crescimento.
+            </p>
+            <p>
+              Minha formação combina teoria, prática intensiva e atualização constante, com destaque para residência em Back-End JavaScript, estudos em Análise e Desenvolvimento de Sistemas e especializações complementares em tecnologia e performance.
+            </p>
+            <p class="font-medium text-brand-dark">
+              Meu diferencial está em conectar marketing, desenvolvimento, dados e estratégia em uma mesma visão de negócio, tornando meu perfil mais adaptável, atual e competitivo.
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+          <article class="card-hover rounded-[24px] border border-brand-line bg-white p-6 shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary">
+              <i class="fa-solid fa-house-chimney-window" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Marketing &amp; Performance</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Campanhas digitais, dados e otimização de conversões em diferentes negócios.</p>
+          </article>
+
+          <article class="card-hover rounded-[24px] border border-brand-line bg-white p-6 shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-secondary/10 text-brand-secondary">
+              <i class="fa-solid fa-code" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Desenvolvimento Back-End</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Desenvolvimento web, integrações de sistemas e automações com APIs e tecnologias de software.</p>
+          </article>
+
+          <article class="card-hover rounded-[24px] border border-brand-line bg-white p-6 shadow-soft">
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-dark">Dados &amp; Automação</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Rastreamento, integração de plataformas e análise de dados para apoiar decisões.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="atuacao" class="border-t border-brand-line bg-white">
+      <div class="site-container py-16 lg:py-24">
+        <div class="reveal grid gap-5 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)] lg:items-end lg:gap-12">
+          <div>
+            <p class="lab-eyebrow">02 / O que desenvolvo no dia a dia</p>
+            <h2 class="section-title fluid-section-title mt-4 font-black text-brand-dark">Estratégia, código e operação conectados.</h2>
+          </div>
+          <p class="text-base leading-8 text-brand-soft">Minha rotina combina a evolução de experiências digitais, o acompanhamento de campanhas e dados e a construção de fluxos que conectam ferramentas e equipes. Atuo do planejamento à validação técnica, com atenção ao impacto de cada entrega para o negócio.</p>
+        </div>
+        <div class="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Desenvolvimento web &amp; UX</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Realizo desenvolvimento e reconstrução completa de front-ends institucionais, landing pages e simuladores, incluindo arquitetura de interfaces, componentes, responsividade e experiência do usuário.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">Front-end · Layouts · Git/GitHub</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-secondary/10 text-brand-secondary"><i class="fa-solid fa-diagram-project" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Automações &amp; integrações</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Desenho e testo fluxos com webhooks, APIs e validação de dados, conectando formulários e jornadas digitais ao n8n e ao Salesforce para apoiar o processo comercial.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">n8n · Salesforce · Webhooks · APIs</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Campanhas &amp; performance</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Estruturo campanhas, analiso a qualidade dos leads e acompanho oportunidades de otimização dos canais pagos, conectando a comunicação aos objetivos comerciais.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">Google Ads · Meta Ads · LinkedIn Ads</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/10 text-brand-primary"><i class="fa-solid fa-magnifying-glass-chart" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Dados &amp; mensuração</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Reviso UTMs, eventos de conversão, parâmetros de campanhas e integrações de rastreamento para melhorar a consistência dos dados entre mídia, site e CRM.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">GA4 · GTM · UTMs · Conversões</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-secondary/10 text-brand-secondary"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">Produtos &amp; ferramentas internas</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Trabalho na evolução do Studio Visual e de componentes reutilizáveis, com foco em personalização, consistência de interfaces e processos de publicação controlados.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">Studio Visual · Componentes · QA</p>
+          </article>
+          <article class="reveal card-hover rounded-[24px] border border-brand-line bg-slate-50 p-6 shadow-soft">
+            <div class="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-accent/10 text-brand-accent"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
+            <h3 class="text-lg font-extrabold text-brand-dark">IA aplicada ao trabalho</h3>
+            <p class="mt-3 text-sm leading-7 text-brand-soft">Utilizo ferramentas de inteligência artificial como apoio à prototipação, análise de problemas, implementação, testes, revisão de conteúdo e documentação técnica.</p>
+            <p class="mt-5 text-xs font-semibold text-brand-primary">IA assistiva · Prototipação · Documentação</p>
+          </article>
+        </div>
+        <div class="reveal lab-workflow mt-7 rounded-[24px] border border-brand-primary/15 bg-gradient-to-r from-blue-50 to-violet-50 p-6 sm:p-8">
+          <p class="text-xs font-bold uppercase tracking-[0.20em] text-brand-primary">Como conduzo as entregas</p>
+          <div class="mt-4 grid gap-4 text-sm font-semibold text-brand-dark sm:grid-cols-2 lg:grid-cols-4">
+            <div><span class="mr-2 text-brand-primary">01</span>Entender o problema</div>
+            <div><span class="mr-2 text-brand-primary">02</span>Desenhar a solução</div>
+            <div><span class="mr-2 text-brand-primary">03</span>Implementar e testar</div>
+            <div><span class="mr-2 text-brand-primary">04</span>Medir e evoluir</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section id="experiencia" class="border-t border-brand-line bg-slate-50">
       <div class="site-container py-16 lg:py-24">
         <div class="reveal mb-12 max-w-2xl">
-          <p class="section-title fluid-section-title font-black text-brand-dark">Experiência Profissional</p>
+          <p class="lab-eyebrow">03 / Trajetória</p><h2 class="section-title fluid-section-title font-black text-brand-dark">Experiência que conecta áreas.</h2>
         </div>
 
         <div class="space-y-6">
@@ -656,7 +912,7 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
       <div class="site-container py-16 lg:py-24">
         <div class="reveal mb-12 flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
           <div class="max-w-2xl">
-            <p class="section-title fluid-section-title font-black text-brand-dark">Competências</p>
+            <p class="lab-eyebrow">04 / Ferramentas &amp; especialidades</p><h2 class="section-title fluid-section-title font-black text-brand-dark">Skills para ir da ideia à entrega.</h2>
           </div>
         </div>
 
@@ -714,7 +970,7 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
 
     <section id="projetos" class="border-y border-brand-line bg-slate-50">
       <div class="site-container py-16 lg:py-24">
-        <div class="reveal mb-10 max-w-3xl"><p class="section-title fluid-section-title font-black text-brand-dark">Projetos &amp; soluções</p><p class="mt-6 text-base leading-8 text-brand-soft">Iniciativas que conectam estratégia, tecnologia, dados e automação. Resultados quantitativos são apresentados somente quando verificados.</p></div>
+        <div class="reveal mb-10 max-w-3xl"><p class="lab-eyebrow">05 / Trabalho em prática</p><h2 class="section-title fluid-section-title font-black text-brand-dark">Projetos &amp; soluções.</h2><p class="mt-6 text-base leading-8 text-brand-soft">Iniciativas que conectam estratégia, tecnologia, dados e automação. Resultados quantitativos são apresentados somente quando verificados.</p></div>
         <div class="grid gap-6 md:grid-cols-2">
           <article class="reveal card-hover rounded-[26px] border border-brand-line bg-white p-6 shadow-soft sm:p-8"><p class="text-xs font-bold uppercase tracking-widest text-brand-primary">Experiência digital</p><h3 class="mt-3 text-xl font-black text-brand-dark">BC Energia — reconstrução completa do front-end</h3><p class="mt-3 text-sm leading-7 text-brand-soft">Reconstrução completa do front-end do site institucional, com arquitetura visual, componentes, responsividade e UX. Trabalho de otimização técnica e editorial para SEO, GEO e AIO, com atenção à descoberta em mecanismos de busca e sistemas de IA.</p><div class="mt-5 grid gap-2 sm:grid-cols-3">
               <div class="rounded-xl border border-violet-300/20 bg-violet-400/10 px-3 py-3"><strong class="block text-sm text-brand-dark">SEO</strong><span class="mt-1 block text-xs text-brand-soft">Estrutura técnica, conteúdo e indexação</span></div>
@@ -731,7 +987,7 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
 
     <section id="formacao" class="site-container py-16 lg:py-24">
       <div class="reveal mb-12 max-w-2xl">
-        <p class="section-title fluid-section-title font-black text-brand-dark">Formação Acadêmica</p>
+        <p class="lab-eyebrow">06 / Conhecimento em evolução</p><h2 class="section-title fluid-section-title font-black text-brand-dark">Minha formação.</h2>
       </div>
 
       <div class="timeline relative ml-1 space-y-7 pl-10">
@@ -778,7 +1034,7 @@ body.creative-digital-lab .lab-workflow div{color:#f5f7ff!important}
     <section id="certificacoes" class="border-y border-brand-line bg-white">
       <div class="site-container py-16 lg:py-24">
         <div class="reveal mb-10 max-w-3xl">
-          <p class="text-xs font-bold uppercase tracking-[0.22em] text-brand-primary">Aprendizado contínuo</p>
+          <p class="lab-eyebrow">07 / Aprendizado contínuo</p>
           <h2 class="section-title fluid-section-title mt-4 font-black text-brand-dark">Cursos &amp; certificações</h2>
           <p class="mt-6 text-base leading-8 text-brand-soft">Formações complementares com conclusão documentada. As certificações com validade encerrada são exibidas como histórico, não como credenciais ativas.</p>
         </div>
